@@ -26,10 +26,20 @@ struct consultantCard: View {
                 .cornerRadius(6)
                 .foregroundColor(.init("gray"))
                 VStack{
+                    
+                    ZStack{
                 Image.init(PictureArr[0])
                     .resizable()
                     .frame(width: 327, height: 196)
                     .padding(.top, -17.0)
+                    
+                    Image.init("play")
+                            .resizable()
+                            .frame(width: 40, height: 40, alignment: .center)
+                        
+                    }
+                    
+                    
                  
                     HStack{
                         
