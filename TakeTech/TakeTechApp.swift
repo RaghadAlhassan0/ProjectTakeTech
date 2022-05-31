@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct TakeTechApp: App {
+    init(){FirebaseApp.configure()}
     var body: some Scene {
         WindowGroup {
             ContentView()
