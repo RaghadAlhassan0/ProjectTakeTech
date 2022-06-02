@@ -21,33 +21,36 @@ struct consultantCard: View {
         ZStack{
             Color.init("background").edgesIgnoringSafeArea(.all)
             
-            ZStack{
-            Rectangle().frame(width: 327, height: 444)
-                .cornerRadius(6)
-                .foregroundColor(.init("gray"))
+           
                 VStack{
-                    
                     ZStack{
                 Image.init(PictureArr[0])
                     .resizable()
-                    .frame(width: 327, height: 196)
+                    .frame(width: 358, height: 196)
                     .padding(.top, -17.0)
-                    
-                    Image.init("play")
+                        Image.init("play")
                             .resizable()
-                            .frame(width: 40, height: 40, alignment: .center)
+                            .frame(width: 31, height: 30, alignment: .center)
                         
                     }
-                    
-                    
                  
                     HStack{
                         
-                        Circle().frame(width: 45, height: 45, alignment: .trailing)
+                        
+                        Image("avatar")
+                            .resizable()
+                            .frame(width: 44, height: 44, alignment: .trailing)
+                            .clipShape(Circle())
+                            
+                        
+                            
+                        
+                        
+//                        Circle().frame(width: 45, height: 45, alignment: .trailing)
                         
                         
                         VStack (alignment: .leading){
-                        Text(userName)
+                        Text("henry J")
                                 .font(.system(size: 16, weight: .semibold, design: .default))
                                     .fontWeight(.medium)
                             
@@ -69,27 +72,32 @@ struct consultantCard: View {
                         Image.init(systemName: "heart")
                         
                         
-//                        ---------------vstack
+//                        ---------------Vstack
                         
                     }
-                    .padding([ .leading, .trailing], 29.0)
+                    
                     .padding()
                     
-                    
-                    Text("""
-Holds a Bachelor's degree in Information
-Technology, an employee at the Public Telecommunications ....
-""")
+                    VStack{
+                        Text("""
+                    Holds a Bachelor's degree in Information Technology, an employee at the Public Telecommunications...
+                    """)
                     .font(.custom("text", size: 12))
-                    .padding(.horizontal, 54.0)
-                    .padding(.bottom, 5.0)
+                   
+                  
                     
+                    Text("Information technology")
+                        .font(.custom("Specialize", size: 12))
+                        .foregroundColor(.init("blue"))
+                        .padding(.leading, -145.0)
+                        .padding(.vertical, 3.0)
+                    } .padding(.horizontal)
                     
                     Divider().padding(.horizontal, 45.0)
                     
                     HStack{
                         
-                        Text("100 SR")
+                        Text("100")
                             .font(.custom("price", size: 16))
                             .foregroundColor(.yellow)
                             .fontWeight(.semibold)
@@ -99,20 +107,21 @@ Technology, an employee at the Public Telecommunications ....
                         
                         Spacer()
                     }.padding(.bottom, 8.0)
-                        .padding(.horizontal, 51.609)
+                        .padding(.horizontal, 25)
                    
                     
                     Text("Book")
                         .foregroundColor(.black)
-                       .frame(width: 285, height: 40, alignment: .center)
+                       .frame(width: 312.02, height: 40, alignment: .center)
                        .background(.foreground)
                        .cornerRadius(6)
                        .foregroundColor(.init("blue"))
+                       .padding(.bottom)
                     
                     
                     
-                }
-            }
+                }.background(Color("gray")).cornerRadius(6).frame(width: 358, height: .infinity, alignment: .center)
+            
         }
     }
 }
