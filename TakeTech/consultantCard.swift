@@ -9,7 +9,7 @@ import SwiftUI
 
 struct consultantCard: View {
     var PictureArr = ["man1" , "man2" , "man3"]
-    var userName = "Henry J"
+    var userName = ["Henry J" , "Khalid Almonyr" , "Noura Alsalem" ]
     var rate = "star.fill"
     var numOfConsulation = 350
     var discription = ""
@@ -46,11 +46,10 @@ struct consultantCard: View {
                             
                         
                         
-//                        Circle().frame(width: 45, height: 45, alignment: .trailing)
                         
                         
                         VStack (alignment: .leading){
-                        Text("henry J")
+                            Text(userName[0])
                                 .font(.system(size: 16, weight: .semibold, design: .default))
                                     .fontWeight(.medium)
                             
@@ -82,7 +81,8 @@ struct consultantCard: View {
                         Text("""
                     Holds a Bachelor's degree in Information Technology, an employee at the Public Telecommunications...
                     """)
-                    .font(.custom("text", size: 12))
+                        .font(.custom("text", size: 12))
+                        .multilineTextAlignment(.leading)
                    
                   
                     

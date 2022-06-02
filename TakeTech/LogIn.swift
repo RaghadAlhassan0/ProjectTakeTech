@@ -32,7 +32,7 @@ struct LogIn: View {
                         .foregroundColor(.gray)
                     
                     TextField("Email Address", text: self.$email)
-                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        .padding(.all)
                     
                     
                 }
@@ -53,7 +53,7 @@ struct LogIn: View {
                         .foregroundColor(.gray)
                     
                     SecureField("Password", text: self.$pass)
-                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        .padding(.all)
                     
                     Image(systemName: "eye.slash.fill")
                         .foregroundColor(.gray)
