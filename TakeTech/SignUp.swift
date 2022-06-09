@@ -25,45 +25,55 @@ struct SignUp: View {
             
             Text("TakeTech")
                 .font(.largeTitle)
+                .padding(.vertical, 60.0)
             
             
             
             
             VStack{
                 
+                Text("Email")
+                    .frame( maxWidth: .infinity, alignment: .leading)
+                    
+
                 HStack(spacing: 15){
                     
                     Image(systemName: "envelope.fill")
                         .foregroundColor(.gray)
                     
-                    TextField("Email Address", text: self.$email)
-                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    TextField("you@example.com", text: self.$email)
                     
                     
                 }
+                
+                .padding(.vertical, 8.0)
                 
                 Divider().background(Color.white.opacity(0.5))
                 
             }
             
             .padding(.horizontal, 32.0)
-            .padding(.top,40)
+            .padding(.top, 1.0)
             
             
             VStack{
+                
+                
+                Text("Password")
+                    .frame( maxWidth: .infinity, alignment: .leading)
                 
                 HStack(spacing: 15){
                     
                     Image(systemName: "lock.fill")
                         .foregroundColor(.gray)
                     
-                    SecureField("Password", text: self.$pass)
-                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    SecureField("***********", text: self.$pass)
                     
                     Image(systemName: "eye.slash.fill")
                         .foregroundColor(.gray)
                     
                 }
+                .padding(.vertical, 8.0)
                 
                 Divider().background(Color.white.opacity(0.5))
                 
@@ -77,7 +87,7 @@ struct SignUp: View {
             
             
             
-            
+            VStack{
             
             
             Button{
@@ -94,8 +104,8 @@ struct SignUp: View {
             .background(Color("blue"))
             .cornerRadius(4)
             
-            .padding(/*@START_MENU_TOKEN@*/.all, 32.0/*@END_MENU_TOKEN@*/)
-            
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+
             
             // OR
             
@@ -157,6 +167,7 @@ struct SignUp: View {
             
             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
+                
             
             HStack{
                 Text("Already have an account? ")
@@ -168,7 +179,9 @@ struct SignUp: View {
                     .foregroundColor(Color("MyYellow"))
                     .underline()
                 
-            }
+                
+            }    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+
             
             
             // I agree ...
@@ -177,10 +190,13 @@ struct SignUp: View {
             VStack{
                 Text("By clicking Sign up, Continue with Apple or Continue with Google, you agree to our")
                 
+                    .frame(width: 300, height: 50, alignment: .leading)
+                       .multilineTextAlignment(.center)
                     .foregroundColor(.white)
                     .font(.footnote)
                     .multilineTextAlignment(.center)
-                    .padding(.top, 50.0)
+
+                    .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
                 
                 
                 Button(action: {} , label:{
@@ -200,9 +216,14 @@ struct SignUp: View {
                 })
                 
                 
+            }
+            
+
                 
             }
             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            .padding(/*@START_MENU_TOKEN@*/.top, 16.0/*@END_MENU_TOKEN@*/)
+
             
             
             
