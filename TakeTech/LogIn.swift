@@ -20,45 +20,54 @@ struct LogIn: View {
             
             Text("TakeTech")
                 .font(.largeTitle)
-            
+                .padding(.vertical, 60.0)
             
             
             
             VStack{
+                
+                Text("Email")
+                    .frame( maxWidth: .infinity, alignment: .leading)
+                
                 
                 HStack(spacing: 15){
                     
                     Image(systemName: "envelope.fill")
                         .foregroundColor(.gray)
                     
-                    TextField("Email Address", text: self.$email)
-                        .padding(.all)
+                    TextField("you@example.com", text: self.$email)
                     
                     
                 }
+                
+                .padding(.vertical, 8.0)
                 
                 Divider().background(Color.white.opacity(0.5))
                 
             }
             
             .padding(.horizontal, 32.0)
-            .padding(.top,40)
+            .padding(.top, 1.0)
             
             
             VStack{
+                
+                
+                Text("Password")
+                    .frame( maxWidth: .infinity, alignment: .leading)
                 
                 HStack(spacing: 15){
                     
                     Image(systemName: "lock.fill")
                         .foregroundColor(.gray)
                     
-                    SecureField("Password", text: self.$pass)
-                        .padding(.all)
+                    SecureField("***********", text: self.$pass)
                     
                     Image(systemName: "eye.slash.fill")
                         .foregroundColor(.gray)
                     
                 }
+                .padding(.vertical, 8.0)
                 
                 Divider().background(Color.white.opacity(0.5))
                 
@@ -67,6 +76,7 @@ struct LogIn: View {
             
             .padding(.horizontal, 32.0)
             .padding(.top,40)
+            
             
             
             
@@ -89,103 +99,111 @@ struct LogIn: View {
             
             
             
-            Button{
+            VStack{
                 
-            } label:{
-                Text("Login")
                 
-                    .frame(width: 250, height: 25)
+                Button{
+                    
+                } label:{
+                    Text("Login")
+                    
+                        .frame(width: 250, height: 25)
+                    
+                }
+                
+                .buttonStyle(.bordered)
+                .foregroundColor(.black)
+                .background(Color("blue"))
+                .cornerRadius(4)
+                
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                
+                
+                // OR
+                
+                HStack{
+                    
+                    Rectangle()
+                        .fill(Color.gray)
+                        .frame(height: 1)
+                        .opacity(0.5)
+                        .padding(/*@START_MENU_TOKEN@*/.leading, 32.0/*@END_MENU_TOKEN@*/)
+                    
+                    Text("OR")
+                        .font(.footnote)
+                        .foregroundColor(Color.gray)
+                        .opacity(0.5)
+                    
+                    
+                    Rectangle()
+                        .fill(Color.gray)
+                        .frame(height: 1)
+                        .opacity(0.5)
+                        .padding(/*@START_MENU_TOKEN@*/.trailing, 32.0/*@END_MENU_TOKEN@*/)
+                    
+                }
+                
+                
+                
+                Button{
+                    
+                } label:{
+                    Text("Continue with Apple")
+                    
+                        .frame(width: 250, height: 25)
+                    
+                    
+                }
+                .buttonStyle(.bordered)
+                .foregroundColor(.black)
+                .background(.white)
+                .cornerRadius(4)
+                
+                .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
+                
+                
+                
+                Button{
+                    
+                } label:{
+                    Text("Continue with Google")
+                    
+                        .frame(width: 250, height: 25)
+                    
+                    
+                }
+                .buttonStyle(.bordered)
+                .foregroundColor(.black)
+                .background(.white)
+                .cornerRadius(4)
+                
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                
+                
+                
+                HStack{
+                    Text("Don’t have an account?")
+                        .font(.footnote)
+                    
+                    Text(" Sign Up")
+                        .font(.footnote)
+                    
+                        .foregroundColor(Color("MyYellow"))
+                        .underline()
+                    
+                }
+                
                 
             }
-            
-            .buttonStyle(.bordered)
-            .foregroundColor(.black)
-            .background(Color("blue"))
-            .cornerRadius(4)
-            
-            .padding(/*@START_MENU_TOKEN@*/.all, 32.0/*@END_MENU_TOKEN@*/)
-            
-            
-            // OR
-            
-            HStack{
-                
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(height: 1)
-                    .opacity(0.5)
-                    .padding(/*@START_MENU_TOKEN@*/.leading, 32.0/*@END_MENU_TOKEN@*/)
-                
-                Text("OR")
-                    .font(.footnote)
-                    .foregroundColor(Color.gray)
-                    .opacity(0.5)
-                
-                
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(height: 1)
-                    .opacity(0.5)
-                    .padding(/*@START_MENU_TOKEN@*/.trailing, 32.0/*@END_MENU_TOKEN@*/)
-                
-            }
-            
-            Button{
-                
-            } label:{
-                Text("Sign in with Apple")
-                
-                    .frame(width: 250, height: 25)
-                
-                
-            }
-            .buttonStyle(.bordered)
-            .foregroundColor(.black)
-            .background(.white)
-            .cornerRadius(4)
-            
-            .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
-            
-            
-            
-            Button{
-                
-            } label:{
-                Text("Sign in with Google")
-                
-                    .frame(width: 250, height: 25)
-                
-                
-            }
-            .buttonStyle(.bordered)
-            .foregroundColor(.black)
-            .background(.white)
-            .cornerRadius(4)
-            
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            
-            HStack{
-                Text("Don’t have an account?")
-                    .font(.footnote)
-                
-                Text(" Sign Up")
-                    .font(.footnote)
-                
-                    .foregroundColor(Color("MyYellow"))
-                    .underline()
-                
-            }
-            
             
             
         }
-        
-        
-        
     }
-    
-    
 }
+
+
+
+
 
 struct LogIn_Previews: PreviewProvider {
     static var previews: some View {

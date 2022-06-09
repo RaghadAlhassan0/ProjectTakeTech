@@ -6,7 +6,7 @@
 //
 
 
-
+import AuthenticationServices
 import SwiftUI
 
 struct SignUp: View {
@@ -150,6 +150,12 @@ struct SignUp: View {
             .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
             
             
+ 
+
+
+                
+                
+                
             
             Button{
                 
@@ -190,7 +196,7 @@ struct SignUp: View {
             VStack{
                 Text("By clicking Sign up, Continue with Apple or Continue with Google, you agree to our")
                 
-                    .frame(width: 300, height: 50, alignment: .leading)
+                    .frame(width: 330, height: 50, alignment: .leading)
                        .multilineTextAlignment(.center)
                     .foregroundColor(.white)
                     .font(.footnote)
