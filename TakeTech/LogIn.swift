@@ -5,14 +5,38 @@
 //  Created by Shahad Alkamli on 31/05/2022.
 //
 
-
+import AuthenticationServices
 
 import SwiftUI
+
+struct AppleUser: Codable {
+    
+    let userId: String
+    let firstName: String
+    let lastName: String
+    let email: String
+    
+    init?(credentials: ASAuthorizationAppleIDCredential){
+        
+        guard
+            let firstName = credentials.fullName?.givenName,
+            let lastName = credentials.fullName?.familyName,
+            let email = credentials.email
+        else{return nil}
+        
+        self.userId = credentials.user
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
+    }
+}
 
 struct LogIn: View {
     
     @State var email = ""
     @State var pass = ""
+    
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         
         VStack{
@@ -102,9 +126,9 @@ struct LogIn: View {
             VStack{
                 
                 
-
+                
                 Button (action: {} ){
-
+                    
                     Text("Login")
                         .foregroundColor(.black)
                         .frame(width: 250, height: 15)
@@ -142,10 +166,25 @@ struct LogIn: View {
                 }
                 
                 
-       
+                
+                //signin with apple
+                
+                
+                
+                SignInWithAppleButton(.signIn, onRequest: configure, onCompletion: handle)
+                
+                
+                    .frame(width: 250, height: 15)
+                    .padding(.all)
+                
+                signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
+                
+                
+                
+                
                 Button (action: {} ){
-
-                    Text("Continue with Apple")
+                    
+                    Text("Continue with Google")
                         .foregroundColor(.black)
                         .frame(width: 250, height: 15)
                         .padding(.all)
@@ -157,22 +196,6 @@ struct LogIn: View {
                 .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
                 
                 
-                
-                
-                         Button (action: {} ){
-
-                             Text("Continue with Google")
-                                 .foregroundColor(.black)
-                                 .frame(width: 250, height: 15)
-                                 .padding(.all)
-                         }
-                         
-                         .background(Color.white)
-                         .cornerRadius(4)
-                         
-                         .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
-                         
-                         
                 
                 HStack{
                     Text("Don’t have an account?")
@@ -194,6 +217,44 @@ struct LogIn: View {
             
         }
     }
+    
+    func configure(_ request: ASAuthorizationAppleIDRequest){
+        
+        request.requestedScopes = [.fullName, .email]
+        //        request.nonce = ""
+        
+    }
+    
+    func handle(_ authResult: ( Result<ASAuthorization, Error>)){
+        
+        switch authResult {
+        case.success(let auth):
+            print(auth)
+            
+            switch auth.credential{
+            case let appleIdCredentials as ASAuthorizationAppleIDCredential:
+                
+                if let appleUser = AppleUser(credentials: appleIdCredentials),
+                   let appleUserDate = try? JSONEncoder().encode(appleUser)
+                {
+                    UserDefaults.standard.setValue(appleUserDate, forKey: appleUser.userId)
+                    
+                    print("saved apple user", appleUser)
+                }
+                
+            default:
+                print(auth.credential)
+                
+                
+            }
+        case.failure(let error):
+            print(error)
+            
+        }
+        
+    }
+    
+    
 }
 
 
