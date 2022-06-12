@@ -11,7 +11,7 @@ import SwiftUI
 
 struct FirstPage: View {
     var body: some View {
-        
+       
         
         VStack{
             
@@ -24,40 +24,30 @@ struct FirstPage: View {
             Spacer()
             
             
-            Button{
-                
-            } label:{
+
+            Button (action: {} ){
+
                 Text("I need a consultant")
-                
-                    .frame(width: 250, height: 25)
-                
+                    .foregroundColor(.black)
+                    .frame(width: 250, height: 15)                    .padding(.all)
             }
             
-            .buttonStyle(.bordered)
-            .foregroundColor(.black)
             .background(Color("blue"))
             .cornerRadius(4)
+
+              
             
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            
-            
-            
-            Button{
-                
-            } label:{
+
+            Button (action: {} ){
+
                 Text("I'm a consultant")
-                
-                    .frame(width: 250, height: 25)
-                
-                
+                    .foregroundColor(.white)
+                    .frame(width: 250, height: 15)
+                    .padding(.all)
             }
-            .buttonStyle(.bordered)
-            .foregroundColor(.white)
-            .background(.black)
-            .border(Color.white)
-            .cornerRadius(4)
             
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            .background(RoundedRectangle(cornerRadius: 4.0).stroke(Color.white))
+
             
             
             Spacer()

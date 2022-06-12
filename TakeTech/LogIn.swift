@@ -102,17 +102,15 @@ struct LogIn: View {
             VStack{
                 
                 
-                Button{
-                    
-                } label:{
+
+                Button (action: {} ){
+
                     Text("Login")
-                    
-                        .frame(width: 250, height: 25)
-                    
+                        .foregroundColor(.black)
+                        .frame(width: 250, height: 15)
+                        .padding(.all)
                 }
                 
-                .buttonStyle(.bordered)
-                .foregroundColor(.black)
                 .background(Color("blue"))
                 .cornerRadius(4)
                 
@@ -144,42 +142,37 @@ struct LogIn: View {
                 }
                 
                 
-                
-                Button{
-                    
-                } label:{
+       
+                Button (action: {} ){
+
                     Text("Continue with Apple")
-                    
-                        .frame(width: 250, height: 25)
-                    
-                    
+                        .foregroundColor(.black)
+                        .frame(width: 250, height: 15)
+                        .padding(.all)
                 }
-                .buttonStyle(.bordered)
-                .foregroundColor(.black)
-                .background(.white)
+                
+                .background(Color.white)
                 .cornerRadius(4)
                 
                 .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
                 
                 
                 
-                Button{
-                    
-                } label:{
-                    Text("Continue with Google")
-                    
-                        .frame(width: 250, height: 25)
-                    
-                    
-                }
-                .buttonStyle(.bordered)
-                .foregroundColor(.black)
-                .background(.white)
-                .cornerRadius(4)
                 
-                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                
-                
+                         Button (action: {} ){
+
+                             Text("Continue with Google")
+                                 .foregroundColor(.black)
+                                 .frame(width: 250, height: 15)
+                                 .padding(.all)
+                         }
+                         
+                         .background(Color.white)
+                         .cornerRadius(4)
+                         
+                         .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
+                         
+                         
                 
                 HStack{
                     Text("Don’t have an account?")
@@ -192,6 +185,8 @@ struct LogIn: View {
                         .underline()
                     
                 }
+                
+                Spacer()
                 
                 
             }

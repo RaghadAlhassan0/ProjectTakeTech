@@ -90,22 +90,18 @@ struct SignUp: View {
             VStack{
             
             
-            Button{
-                
-            } label:{
-                Text("Sign Up")
-                
-                    .frame(width: 250, height: 25)
-                
-            }
-            
-            .buttonStyle(.bordered)
-            .foregroundColor(.black)
-            .background(Color("blue"))
-            .cornerRadius(4)
-            
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                Button (action: {} ){
 
+                    Text("Sign Up")
+                        .foregroundColor(.black)
+                        .frame(width: 250, height: 15)
+                        .padding(.all)
+                }
+                
+                .background(Color("blue"))
+                .cornerRadius(4)
+                
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
             // OR
             
@@ -115,7 +111,7 @@ struct SignUp: View {
                     .fill(Color.gray)
                     .frame(height: 1)
                     .opacity(0.5)
-                    .padding(/*@START_MENU_TOKEN@*/.leading, 32.0/*@END_MENU_TOKEN@*/)
+                    .padding(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                 
                 Text("OR")
                     .font(.footnote)
@@ -127,51 +123,42 @@ struct SignUp: View {
                     .fill(Color.gray)
                     .frame(height: 1)
                     .opacity(0.5)
-                    .padding(/*@START_MENU_TOKEN@*/.trailing, 32.0/*@END_MENU_TOKEN@*/)
+                    .padding(/*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/)
                 
             }
             
             
             
-            Button{
-                
-            } label:{
-                Text("Continue with Apple")
-                
-                    .frame(width: 250, height: 25)
-                
-                
-            }
-            .buttonStyle(.bordered)
-            .foregroundColor(.black)
-            .background(.white)
-            .cornerRadius(4)
-            
-            .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
-            
-            
- 
+                Button (action: {} ){
 
+                    Text("Continue with Apple")
+                        .foregroundColor(.black)
+                        .frame(width: 250, height: 15)
+                        .padding(.all)
+                }
+                
+                .background(Color.white)
+                .cornerRadius(4)
+                
+                .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
+                
+                
+                
+                
+                         Button (action: {} ){
 
-                
-                
-                
-            
-            Button{
-                
-            } label:{
-                Text("Continue with Google")
-                
-                    .frame(width: 250, height: 25)
-                
-                
-            }
-            .buttonStyle(.bordered)
-            .foregroundColor(.black)
-            .background(.white)
-            .cornerRadius(4)
-            
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                             Text("Continue with Google")
+                                 .foregroundColor(.black)
+                                 .frame(width: 250, height: 15)
+                                 .padding(.all)
+                         }
+                         
+                         .background(Color.white)
+                         .cornerRadius(4)
+                         
+                         .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
+                         
+                         
             
                 
             
@@ -231,7 +218,8 @@ struct SignUp: View {
             .padding(/*@START_MENU_TOKEN@*/.top, 16.0/*@END_MENU_TOKEN@*/)
 
             
-            
+            Spacer()
+
             
         }
         
