@@ -34,6 +34,7 @@ struct FirstPage: View {
             
             .background(Color("blue"))
             .cornerRadius(4)
+            .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
 
               
             
@@ -48,7 +49,8 @@ struct FirstPage: View {
             
             .background(RoundedRectangle(cornerRadius: 4.0).stroke(Color.white))
 
-            
+            .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
+
             
             Spacer()
             
