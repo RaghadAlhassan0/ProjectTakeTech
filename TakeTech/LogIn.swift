@@ -9,27 +9,7 @@ import AuthenticationServices
 
 import SwiftUI
 
-struct AppleUser: Codable {
-    
-    let userId: String
-    let firstName: String
-    let lastName: String
-    let email: String
-    
-    init?(credentials: ASAuthorizationAppleIDCredential){
-        
-        guard
-            let firstName = credentials.fullName?.givenName,
-            let lastName = credentials.fullName?.familyName,
-            let email = credentials.email
-        else{return nil}
-        
-        self.userId = credentials.user
-        self.firstName = firstName
-        self.lastName = lastName
-        self.email = email
-    }
-}
+
 
 struct LogIn: View {
     
@@ -46,33 +26,8 @@ struct LogIn: View {
                 .font(.largeTitle)
                 .padding(.vertical, 60.0)
             
-            
-            
-            VStack{
-                
-                Text("Email")
-                    .frame( maxWidth: .infinity, alignment: .leading)
-                
-                
-                HStack(spacing: 15){
-                    
-                    Image(systemName: "envelope.fill")
-                        .foregroundColor(.gray)
-                    
-                    TextField("you@example.com", text: self.$email)
-                    
-                    
-                }
-                
-                .padding(.vertical, 8.0)
-                
-                Divider().background(Color.white.opacity(0.5))
-                
-            }
-            
-            .padding(.horizontal, 32.0)
-            .padding(.top, 1.0)
-            
+
+            mailView(email: email)
             
             passView(pass: pass)
             
@@ -176,6 +131,110 @@ struct LogIn: View {
         }
     }
     
+    
+
+
+
+
+
+struct passView: View {
+    
+    
+    @State var pass: String
+    
+    var body: some View {
+        VStack{
+            
+            
+            Text("Password")
+                .frame( maxWidth: .infinity, alignment: .leading)
+            
+            HStack(spacing: 15){
+                
+                Image(systemName: "lock.fill")
+                    .foregroundColor(.gray)
+                
+                SecureField("***********", text: self.$pass)
+                
+                Image(systemName: "eye.slash.fill")
+                    .foregroundColor(.gray)
+                
+            }
+            .padding(.vertical, 8.0)
+            
+            Divider().background(Color.white.opacity(0.5))
+            
+            
+        }
+        
+        .padding(.horizontal, 32.0)
+        .padding(.top,40)
+    }
+}
+
+
+
+struct mailView: View{
+    
+    
+    @State var email: String
+    
+    var body: some View {
+    
+    
+    VStack{
+        
+        Text("Email")
+            .frame( maxWidth: .infinity, alignment: .leading)
+        
+        
+        HStack(spacing: 15){
+            
+            Image(systemName: "envelope.fill")
+                .foregroundColor(.gray)
+            
+            TextField("you@example.com", text: self.$email)
+            
+            
+        }
+        
+        .padding(.vertical, 8.0)
+        
+        Divider().background(Color.white.opacity(0.5))
+        
+    }
+    
+    .padding(.horizontal, 32.0)
+    .padding(.top, 1.0)
+        
+    }
+    
+}
+
+
+struct AppleUser: Codable {
+    
+    let userId: String
+    let firstName: String
+    let lastName: String
+    let email: String
+    
+    init?(credentials: ASAuthorizationAppleIDCredential){
+        
+        guard
+            let firstName = credentials.fullName?.givenName,
+            let lastName = credentials.fullName?.familyName,
+            let email = credentials.email
+        else{return nil}
+        
+        self.userId = credentials.user
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
+    }
+}
+
+
     func configure(_ request: ASAuthorizationAppleIDRequest){
         
         request.requestedScopes = [.fullName, .email]
@@ -224,47 +283,6 @@ struct LogIn: View {
     
     
 }
-
-
-
-
-
-
-struct passView: View {
-    
-    
-    @State var pass: String
-    
-    var body: some View {
-        VStack{
-            
-            
-            Text("Password")
-                .frame( maxWidth: .infinity, alignment: .leading)
-            
-            HStack(spacing: 15){
-                
-                Image(systemName: "lock.fill")
-                    .foregroundColor(.gray)
-                
-                SecureField("***********", text: self.$pass)
-                
-                Image(systemName: "eye.slash.fill")
-                    .foregroundColor(.gray)
-                
-            }
-            .padding(.vertical, 8.0)
-            
-            Divider().background(Color.white.opacity(0.5))
-            
-            
-        }
-        
-        .padding(.horizontal, 32.0)
-        .padding(.top,40)
-    }
-}
-
 
 
 
