@@ -15,6 +15,8 @@ struct SignUp: View {
     @State var email = ""
     @State var pass = ""
     
+    @Environment(\.colorScheme) var colorScheme
+
     
     var body: some View {
         
@@ -29,61 +31,9 @@ struct SignUp: View {
             
             
             
+            mailView(email: email)
             
-            VStack{
-                
-                Text("Email")
-                    .frame( maxWidth: .infinity, alignment: .leading)
-                    
-
-                HStack(spacing: 15){
-                    
-                    Image(systemName: "envelope.fill")
-                        .foregroundColor(.gray)
-                    
-                    TextField("you@example.com", text: self.$email)
-                    
-                    
-                }
-                
-                .padding(.vertical, 8.0)
-                
-                Divider().background(Color.white.opacity(0.5))
-                
-            }
-            
-            .padding(.horizontal, 32.0)
-            .padding(.top, 1.0)
-            
-            
-            VStack{
-                
-                
-                Text("Password")
-                    .frame( maxWidth: .infinity, alignment: .leading)
-                
-                HStack(spacing: 15){
-                    
-                    Image(systemName: "lock.fill")
-                        .foregroundColor(.gray)
-                    
-                    SecureField("***********", text: self.$pass)
-                    
-                    Image(systemName: "eye.slash.fill")
-                        .foregroundColor(.gray)
-                    
-                }
-                .padding(.vertical, 8.0)
-                
-                Divider().background(Color.white.opacity(0.5))
-                
-                
-            }
-            
-            .padding(.horizontal, 32.0)
-            .padding(.top,40)
-            
-            
+            passView(pass: pass)
             
             
             
@@ -127,37 +77,13 @@ struct SignUp: View {
                 
             }
             
-            
-            
-                Button (action: {} ){
-
-                    Text("Continue with Apple")
-                        .foregroundColor(.black)
-                        .frame(width: 250, height: 15)
-                        .padding(.all)
-                }
+                //sign up with apple
+                SignInWithAppleButton(.signUp, onRequest: configure, onCompletion: handle)
                 
-                .background(Color.white)
-                .cornerRadius(4)
-                
-                .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
-                
-                
-                
-                
-                         Button (action: {} ){
-
-                             Text("Continue with Google")
-                                 .foregroundColor(.black)
-                                 .frame(width: 250, height: 15)
-                                 .padding(.all)
-                         }
-                         
-                         .background(Color.white)
-                         .cornerRadius(4)
-                         
-                         .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
-                         
+                    .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
+                    .frame(width: 285, height: 47)
+                    .cornerRadius(4)
+                    .padding(.all)
                          
             
                 
@@ -181,7 +107,7 @@ struct SignUp: View {
             
             
             VStack{
-                Text("By clicking Sign up, Continue with Apple or Continue with Google, you agree to our")
+                Text("By clicking Sign up or Sign up with Apple, you agree to our")
                 
                     .frame(width: 330, height: 50, alignment: .leading)
                        .multilineTextAlignment(.center)
@@ -229,6 +155,157 @@ struct SignUp: View {
     
     
 }
+
+
+
+struct passView: View {
+    
+    
+    @State var pass: String
+    
+    var body: some View {
+        VStack{
+            
+            
+            Text("Password")
+                .frame( maxWidth: .infinity, alignment: .leading)
+            
+            HStack(spacing: 15){
+                
+                Image(systemName: "lock.fill")
+                    .foregroundColor(.gray)
+                
+                SecureField("***********", text: self.$pass)
+                
+                Image(systemName: "eye.slash.fill")
+                    .foregroundColor(.gray)
+                
+            }
+            .padding(.vertical, 8.0)
+            
+            Divider().background(Color.white.opacity(0.5))
+            
+            
+        }
+        
+        .padding(.horizontal, 32.0)
+        .padding(.top,40)
+    }
+}
+
+
+
+struct mailView: View{
+    
+    
+    @State var email: String
+    
+    var body: some View {
+    
+    
+    VStack{
+        
+        Text("Email")
+            .frame( maxWidth: .infinity, alignment: .leading)
+        
+        
+        HStack(spacing: 15){
+            
+            Image(systemName: "envelope.fill")
+                .foregroundColor(.gray)
+            
+            TextField("you@example.com", text: self.$email)
+            
+            
+        }
+        
+        .padding(.vertical, 8.0)
+        
+        Divider().background(Color.white.opacity(0.5))
+        
+    }
+    
+    .padding(.horizontal, 32.0)
+    .padding(.top, 1.0)
+        
+    }
+    
+}
+
+
+
+
+struct AppleUser: Codable {
+    
+    let userId: String
+    let firstName: String
+    let lastName: String
+    let email: String
+    
+    init?(credentials: ASAuthorizationAppleIDCredential){
+        
+        guard
+            let firstName = credentials.fullName?.givenName,
+            let lastName = credentials.fullName?.familyName,
+            let email = credentials.email
+        else{return nil}
+        
+        self.userId = credentials.user
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
+    }
+}
+
+
+    func configure(_ request: ASAuthorizationAppleIDRequest){
+        
+        request.requestedScopes = [.fullName, .email]
+        //        request.nonce = ""
+        
+    }
+    
+    func handle(_ authResult: ( Result<ASAuthorization, Error>)){
+        
+        switch authResult {
+        case.success(let auth):
+            print(auth)
+            
+            switch auth.credential{
+            case let appleIdCredentials as ASAuthorizationAppleIDCredential:
+                
+                if let appleUser = AppleUser(credentials: appleIdCredentials),
+                   let appleUserDate = try? JSONEncoder().encode(appleUser)
+                {
+                    UserDefaults.standard.setValue(appleUserDate, forKey: appleUser.userId)
+                    
+                    print("saved apple user", appleUser)
+                } else{
+                    print("missing some fields",appleIdCredentials.email, appleIdCredentials.fullName, appleIdCredentials.user)
+                    
+                    guard
+                        let appleUserData = UserDefaults.standard.data(forKey: appleIdCredentials.user),
+                        let appleUser = try? JSONDecoder().decode(AppleUser.self, from: appleUserData)
+                            
+                    else { return }
+                    
+                    print(appleUser)
+                }
+                
+            default:
+                print(auth.credential)
+                
+                
+            }
+        case.failure(let error):
+            print(error)
+            
+        }
+        
+    }
+    
+
+
 
 struct SignUp_Previews: PreviewProvider {
     static var previews: some View {
