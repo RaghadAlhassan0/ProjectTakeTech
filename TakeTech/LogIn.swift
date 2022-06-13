@@ -74,32 +74,7 @@ struct LogIn: View {
             .padding(.top, 1.0)
             
             
-            VStack{
-                
-                
-                Text("Password")
-                    .frame( maxWidth: .infinity, alignment: .leading)
-                
-                HStack(spacing: 15){
-                    
-                    Image(systemName: "lock.fill")
-                        .foregroundColor(.gray)
-                    
-                    SecureField("***********", text: self.$pass)
-                    
-                    Image(systemName: "eye.slash.fill")
-                        .foregroundColor(.gray)
-                    
-                }
-                .padding(.vertical, 8.0)
-                
-                Divider().background(Color.white.opacity(0.5))
-                
-                
-            }
-            
-            .padding(.horizontal, 32.0)
-            .padding(.top,40)
+            passView(pass: pass)
             
             
             
@@ -124,11 +99,8 @@ struct LogIn: View {
             
             
             VStack{
-                
-                
-                
                 Button (action: {} ){
-                    
+                    //
                     Text("Login")
                         .foregroundColor(.black)
                         .frame(width: 250, height: 15)
@@ -139,12 +111,8 @@ struct LogIn: View {
                 .cornerRadius(4)
                 
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                
-                
-                // OR
-                
                 HStack{
-                    
+                    //
                     Rectangle()
                         .fill(Color.gray)
                         .frame(height: 1)
@@ -165,35 +133,28 @@ struct LogIn: View {
                     
                 }
                 
-                
-                
                 //signin with apple
-                
-                
-                
                 SignInWithAppleButton(.signIn, onRequest: configure, onCompletion: handle)
                 
-                
-                    .frame(width: 250, height: 15)
+                    .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
+                    .frame(width: 285, height: 47)
+                    .cornerRadius(4)
                     .padding(.all)
                 
-                signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
                 
-                
-                
-                
-                Button (action: {} ){
-                    
-                    Text("Continue with Google")
-                        .foregroundColor(.black)
-                        .frame(width: 250, height: 15)
-                        .padding(.all)
-                }
-                
-                .background(Color.white)
-                .cornerRadius(4)
-                
-                .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
+//                Button (action: {} ){
+//                    //
+//                    Text("Continue with Google")
+//                        .foregroundColor(.black)
+//                        .frame(width: 250, height: 15)
+//                        .padding(.all)
+//                }
+//
+//                .background(Color.white)
+//
+//                .cornerRadius(4)
+//
+//                .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
                 
                 
                 
@@ -210,19 +171,16 @@ struct LogIn: View {
                 }
                 
                 Spacer()
-                
-                
             }
-            
             
         }
     }
     
     func configure(_ request: ASAuthorizationAppleIDRequest){
-
+        
         request.requestedScopes = [.fullName, .email]
         //        request.nonce = ""
-
+        
     }
     
     func handle(_ authResult: ( Result<ASAuthorization, Error>)){
@@ -263,8 +221,48 @@ struct LogIn: View {
         }
         
     }
-
     
+    
+}
+
+
+
+
+
+
+struct passView: View {
+    
+    
+    @State var pass: String
+    
+    var body: some View {
+        VStack{
+            
+            
+            Text("Password")
+                .frame( maxWidth: .infinity, alignment: .leading)
+            
+            HStack(spacing: 15){
+                
+                Image(systemName: "lock.fill")
+                    .foregroundColor(.gray)
+                
+                SecureField("***********", text: self.$pass)
+                
+                Image(systemName: "eye.slash.fill")
+                    .foregroundColor(.gray)
+                
+            }
+            .padding(.vertical, 8.0)
+            
+            Divider().background(Color.white.opacity(0.5))
+            
+            
+        }
+        
+        .padding(.horizontal, 32.0)
+        .padding(.top,40)
+    }
 }
 
 
@@ -279,5 +277,3 @@ struct LogIn_Previews: PreviewProvider {
         
     }
 }
-
-
