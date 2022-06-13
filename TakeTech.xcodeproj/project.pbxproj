@@ -20,6 +20,13 @@
 		10C56F1F2855E66400A55DD8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 10C56F1E2855E66400A55DD8 /* FirebaseAuth */; };
 		10C56F212855E66400A55DD8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 10C56F202855E66400A55DD8 /* FirebaseFirestore */; };
 		10C56F232855E66400A55DD8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 10C56F222855E66400A55DD8 /* FirebaseStorage */; };
+		8828DE762857265000325CDF /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8828DE752857265000325CDF /* TabBar.swift */; };
+		8828DE782857268600325CDF /* TabBarConsu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8828DE772857268600325CDF /* TabBarConsu.swift */; };
+		8828DE7A2857269B00325CDF /* PastCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8828DE792857269B00325CDF /* PastCard.swift */; };
+		8828DE7C285726B200325CDF /* Upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8828DE7B285726B200325CDF /* Upcoming.swift */; };
+		8828DE7E285726D800325CDF /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8828DE7D285726D800325CDF /* Review.swift */; };
+		8828DE80285726F500325CDF /* SessionConfirmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8828DE7F285726F500325CDF /* SessionConfirmedView.swift */; };
+		8828DE822857273F00325CDF /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8828DE812857273F00325CDF /* SessionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +42,13 @@
 		106CE6CF2847EFE200E394BB /* Conditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
 		10C56F1A2851D41000A55DD8 /* TakeTech.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TakeTech.entitlements; sourceTree = "<group>"; };
 		10C56F1B2855E58100A55DD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8828DE752857265000325CDF /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		8828DE772857268600325CDF /* TabBarConsu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConsu.swift; sourceTree = "<group>"; };
+		8828DE792857269B00325CDF /* PastCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastCard.swift; sourceTree = "<group>"; };
+		8828DE7B285726B200325CDF /* Upcoming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upcoming.swift; sourceTree = "<group>"; };
+		8828DE7D285726D800325CDF /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		8828DE7F285726F500325CDF /* SessionConfirmedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionConfirmedView.swift; sourceTree = "<group>"; };
+		8828DE812857273F00325CDF /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +92,12 @@
 				106CE6CB2847EF9900E394BB /* LogIn.swift */,
 				106CE6CD2847EFBF00E394BB /* SignUp.swift */,
 				106CE6CF2847EFE200E394BB /* Conditions.swift */,
+				8828DE7D285726D800325CDF /* Review.swift */,
+				8828DE7F285726F500325CDF /* SessionConfirmedView.swift */,
+				8828DE812857273F00325CDF /* SessionView.swift */,
 				10C56F1B2855E58100A55DD8 /* GoogleService-Info.plist */,
 				091FA2F52845D7D70035F3F4 /* Assets.xcassets */,
+				8828DE742857261B00325CDF /* Model */,
 				091FA2F72845D7D70035F3F4 /* Preview Content */,
 			);
 			path = TakeTech;
@@ -91,6 +109,17 @@
 				091FA2F82845D7D70035F3F4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8828DE742857261B00325CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8828DE752857265000325CDF /* TabBar.swift */,
+				8828DE772857268600325CDF /* TabBarConsu.swift */,
+				8828DE792857269B00325CDF /* PastCard.swift */,
+				8828DE7B285726B200325CDF /* Upcoming.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,11 +203,18 @@
 			files = (
 				106CE6D02847EFE200E394BB /* Conditions.swift in Sources */,
 				106CE6CC2847EF9900E394BB /* LogIn.swift in Sources */,
+				8828DE80285726F500325CDF /* SessionConfirmedView.swift in Sources */,
+				8828DE7C285726B200325CDF /* Upcoming.swift in Sources */,
 				106CE6CE2847EFBF00E394BB /* SignUp.swift in Sources */,
+				8828DE762857265000325CDF /* TabBar.swift in Sources */,
+				8828DE7E285726D800325CDF /* Review.swift in Sources */,
+				8828DE822857273F00325CDF /* SessionView.swift in Sources */,
 				091FA2F42845D7D70035F3F4 /* ContentView.swift in Sources */,
+				8828DE7A2857269B00325CDF /* PastCard.swift in Sources */,
 				091FA3052845E3040035F3F4 /* consultantCard.swift in Sources */,
 				091FA2F22845D7D70035F3F4 /* TakeTechApp.swift in Sources */,
 				106CE6CA2847EF6D00E394BB /* FirstPage.swift in Sources */,
+				8828DE782857268600325CDF /* TabBarConsu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
