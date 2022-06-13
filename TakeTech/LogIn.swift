@@ -219,10 +219,10 @@ struct LogIn: View {
     }
     
     func configure(_ request: ASAuthorizationAppleIDRequest){
-        
+
         request.requestedScopes = [.fullName, .email]
         //        request.nonce = ""
-        
+
     }
     
     func handle(_ authResult: ( Result<ASAuthorization, Error>)){
@@ -263,7 +263,7 @@ struct LogIn: View {
         }
         
     }
-    
+
     
 }
 
