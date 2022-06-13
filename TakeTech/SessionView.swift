@@ -12,77 +12,77 @@ struct SessionView: View {
     @State var isUpcomming: Bool = true
     
     var body: some View {
-       
-        NavigationView{
         
-        ZStack{
-            Color.init("background")
+        NavigationView{
             
-            
-            VStack(alignment: .center){
+            ZStack{
+                Color.init("background")
                 
-                //App Bar :
-                HStack{
+                
+                VStack(alignment: .center){
                     
-                    Button(action: {
-                        withAnimation { isUpcomming = true }
+                    //App Bar :
+                    HStack{
                         
-                    }) {
+                        Button(action: {
+                            withAnimation { isUpcomming = true }
+                            
+                        }) {
+                            
+                            VStack{
+                                
+                                
+                                Text("Upcoming")
+                                    .foregroundColor(self.isUpcomming ? .white : Color.white.opacity(0.7))
+                                
+                                
+                                Capsule()
+                                    .fill(self.isUpcomming ? Color.white : Color.clear)
+                                    .frame(height:4)
+                                
+                            }
+                        }  .padding(.horizontal, 50.0)
                         
-                        VStack{
+                        Button(action: {
+                            withAnimation { isUpcomming = false }
+                            
+                        }) {
                             
                             
-                            Text("Upcoming")
-                                .foregroundColor(self.isUpcomming ? .white : Color.white.opacity(0.7))
-                            
-                            
-                            Capsule()
-                                .fill(self.isUpcomming ? Color.white : Color.clear)
-                                .frame(height:4)
+                            VStack{
+                                
+                                
+                                Text("Past")
+                                    .foregroundColor(!self.isUpcomming ? .white : Color.white.opacity(0.7))
+                                
+                                
+                                Capsule()
+                                    .fill(!self.isUpcomming ? Color.white : Color.clear)
+                                    .frame(height:4)
+                                
+                            }
                             
                         }
-                    }  .padding(.horizontal, 50.0)
-                    
-                    Button(action: {
-                        withAnimation { isUpcomming = false }
                         
-                    }) {
-                        
-                        
-                        VStack{
-                            
-                            
-                            Text("Past")
-                                .foregroundColor(!self.isUpcomming ? .white : Color.white.opacity(0.7))
-                            
-                            
-                            Capsule()
-                                .fill(!self.isUpcomming ? Color.white : Color.clear)
-                                .frame(height:4)
-                            
-                        }
+                        .padding(.horizontal, 55.0)
                         
                     }
+                    .padding(.top, 125.0)
                     
-                    .padding(.horizontal, 55.0)
-                    
+                    if isUpcomming {
+                        Upcoming().padding()
+                    } else {
+                        PastCard().padding()
+                    }
+                    Spacer()
                 }
-                .padding(.top, 125.0)
                 
-                if isUpcomming {
-                    Upcoming().padding()
-                } else {
-                    PastCard().padding()
-                }
-                Spacer()
-            }
+            }            .edgesIgnoringSafeArea(.all)
             
-        }            .edgesIgnoringSafeArea(.all)
-        
                 .navigationTitle("Sessions")
-                    .navigationBarTitleDisplayMode(.inline)
+                .navigationBarTitleDisplayMode(.inline)
         }
-
+        
     }
 }
 

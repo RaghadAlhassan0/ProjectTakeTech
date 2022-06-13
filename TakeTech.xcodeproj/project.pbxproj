@@ -97,6 +97,7 @@
 				8828DE812857273F00325CDF /* SessionView.swift */,
 				10C56F1B2855E58100A55DD8 /* GoogleService-Info.plist */,
 				091FA2F52845D7D70035F3F4 /* Assets.xcassets */,
+				8828DE742857261B00325CDF /* Model */,
 				091FA2F72845D7D70035F3F4 /* Preview Content */,
 			);
 			path = TakeTech;
@@ -105,7 +106,6 @@
 		091FA2F72845D7D70035F3F4 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				8828DE742857261B00325CDF /* Model */,
 				091FA2F82845D7D70035F3F4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";

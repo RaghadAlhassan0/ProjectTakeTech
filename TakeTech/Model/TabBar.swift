@@ -11,8 +11,6 @@ struct TabBar: View {
     init(){
         UITabBar.appearance().backgroundColor =  UIColor(.init("gray"))
         
-
-       
     }
     var body: some View {
         
@@ -21,14 +19,14 @@ struct TabBar: View {
             
             
             Text("Consul...")
-             
+            
                 .tabItem {
                     Image(systemName:"bubble.left.and.exclamationmark.bubble.right.fill")
                     
                     Text("Consultants")
-                      
-                        
-                  
+                    
+                    
+                    
                     
                 }
             
@@ -46,14 +44,13 @@ struct TabBar: View {
                     
                 }
             
-                
+            
         }
         
         .accentColor(.white)
         .frame(height:820)
         
     }
-    
     
     
 }

@@ -108,7 +108,7 @@ struct Upcoming: View {
                         .padding(.horizontal)
                         .frame(width: 326.0)
                     
-                 
+                    
                 }
                 .padding(.top, 6.0)
                 

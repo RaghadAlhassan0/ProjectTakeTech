@@ -38,20 +38,20 @@ struct SessionConfirmedView: View {
                         .padding(.top, 6.0)
                 }
                 
-                 HStack{
-                Text("A confirmation mail will be sent to your email Please refer to our no-show/cancellation policy for our sessions")
-                    .font(.custom("text", size: 13))
-                    .foregroundColor(Color.gray)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 57.0)
-                    .padding(.bottom, 471.0)
-                
-                
-                  }
+                HStack{
+                    Text("A confirmation mail will be sent to your email Please refer to our no-show/cancellation policy for our sessions")
+                        .font(.custom("text", size: 13))
+                        .foregroundColor(Color.gray)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 57.0)
+                        .padding(.bottom, 471.0)
+                    
+                    
+                }
                 
             }
-           
-          
+            
+            
             ZStack{
                 Rectangle()
                     .padding(.top, 1.0)
@@ -61,18 +61,18 @@ struct SessionConfirmedView: View {
                     .cornerRadius(6)
                     .foregroundColor(.init("gray"))
                 
-                   
+                
                 
                 HStack{
                     
                     Image("ImgKhalid")
                         .resizable()
                         .frame(width: 56, height: 56)
-                
+                    
                         .padding(.leading, 30.0)
-                       
-                      
-                      
+                    
+                    
+                    
                     
                     
                     Text("Khalid Almonyr")
@@ -80,58 +80,58 @@ struct SessionConfirmedView: View {
                         .fontWeight(.medium)
                     
                         .padding(.all, 6.0)
-                  
                     
-                      
+                    
+                    
                         .padding(.trailing, 104.0)
                 }.padding(.bottom, 200)
                 
-                    
+                
                 VStack{
                     
-                HStack{
-                    
-                  
-                    Text("Name")
-                       
-                        .padding(.top, 40.0)
-                       
-                    Text("Mohammed")
-                        .foregroundColor(Color.gray)
-                        .padding(.top, 40.0)
-                        .padding(.leading, 130.0)
-                }.padding()
+                    HStack{
+                        
+                        
+                        Text("Name")
+                        
+                            .padding(.top, 40.0)
+                        
+                        Text("Mohammed")
+                            .foregroundColor(Color.gray)
+                            .padding(.top, 40.0)
+                            .padding(.leading, 130.0)
+                    }.padding()
                     
                     
                     HStack{
                         
-                    Text("Date")
-            
+                        Text("Date")
+                        
                             .padding(.trailing, 20.0)
                         Text("20th May 2022")
                             .foregroundColor(Color.gray)
                             .padding(.leading, 96.0)
-                   
+                        
                         
                     }
                     
                     HStack{
-                    Text("Time")
-                        .padding(.trailing, 20.0)
-                      
+                        Text("Time")
+                            .padding(.trailing, 20.0)
+                        
                         Text("6:20 PM")
                             .foregroundColor(Color.gray)
                             .padding(.leading, 145.0)
-                
+                        
                     }
                     .padding(.top)
                     
                 }.padding(.leading, 16.0)
                     .padding(.trailing, 16.0)
-               
-
+                
+                
                 VStack{
-                   
+                    
                     
                     Spacer()
                     
@@ -150,15 +150,15 @@ struct SessionConfirmedView: View {
                         
                     }
                     
-                
+                    
                     .padding(.bottom, 80.0)
                     .padding(.trailing, 12.0)
                     
                 }
                 .padding(.leading)
-              
-            
-        }
+                
+                
+            }
         }
     }
 }
