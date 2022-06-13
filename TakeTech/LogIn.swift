@@ -240,6 +240,16 @@ struct LogIn: View {
                     UserDefaults.standard.setValue(appleUserDate, forKey: appleUser.userId)
                     
                     print("saved apple user", appleUser)
+                } else{
+                    print("missing some fields",appleIdCredentials.email, appleIdCredentials.fullName, appleIdCredentials.user)
+                    
+                    guard
+                        let appleUserData = UserDefaults.standard.data(forKey: appleIdCredentials.user),
+                        let appleUser = try? JSONDecoder().decode(AppleUser.self, from: appleUserData)
+                            
+                    else { return }
+                    
+                    print(appleUser)
                 }
                 
             default:
