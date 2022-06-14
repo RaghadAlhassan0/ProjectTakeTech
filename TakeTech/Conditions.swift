@@ -16,6 +16,12 @@ struct Conditions : View {
             Color.init("background").edgesIgnoringSafeArea(.all)
         VStack{
             
+            Image("Logo")
+                      .resizable()
+                      .frame(width: 100, height: 100, alignment: .center)
+                      .padding(/*@START_MENU_TOKEN@*/.all, 40.0/*@END_MENU_TOKEN@*/)
+
+                 
             
             Text("Terms and Conditions")
                 .font(.largeTitle)

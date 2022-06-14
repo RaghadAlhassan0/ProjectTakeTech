@@ -25,10 +25,13 @@ struct SignUp: View {
             
             VStack{
                 
-                
-                Text("TakeTech")
-                    .font(.largeTitle)
-                    .padding(.vertical, 60.0)
+              
+                Image("Logo")
+                          .resizable()
+                          .frame(width: 100, height: 100, alignment: .center)
+                          .padding(/*@START_MENU_TOKEN@*/.all, 40.0/*@END_MENU_TOKEN@*/)
+
+                      
                 
                 
                 
@@ -52,7 +55,7 @@ struct SignUp: View {
                     .background(Color("blue"))
                     .cornerRadius(4)
                     
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing]/*@END_MENU_TOKEN@*/)
                     
                     // OR
                     
@@ -142,7 +145,7 @@ struct SignUp: View {
                     
                 }
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                .padding(/*@START_MENU_TOKEN@*/.top, 16.0/*@END_MENU_TOKEN@*/)
+                .padding(.top, 6.0)
                 
                 
                 Spacer()
@@ -190,7 +193,7 @@ struct passView: View {
         }
         
         .padding(.horizontal, 32.0)
-        .padding(.top,40)
+        .padding(.top)
     }
 }
 

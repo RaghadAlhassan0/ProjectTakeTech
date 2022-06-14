@@ -18,8 +18,10 @@ struct FirstPage: View {
                 
                 Spacer()
                 
-                Text("TakeTech")
-                    .font(.largeTitle)
+          Image("Logo")
+                    .resizable()
+                    .frame(width: 200, height: 200, alignment: .center)
+                    
                 
                 
                 Spacer()
