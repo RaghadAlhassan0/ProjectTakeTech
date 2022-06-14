@@ -6,7 +6,6 @@
 //
 
 import AuthenticationServices
-
 import SwiftUI
 
 
@@ -19,222 +18,226 @@ struct LogIn: View {
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
         
-        VStack{
-            
-            
-            Text("TakeTech")
-                .font(.largeTitle)
-                .padding(.vertical, 60.0)
-            
-
-            mailView(email: email)
-            
-            passView(pass: pass)
-            
-            
-            
-            
-            // Forgot Password ...
-            
-            Button(action: {} , label:{
-                
-                Text("Forgot your password?")
-                    .font(.footnote)
-                
-                    .foregroundColor(Color("MyYellow"))
-                
-                    .underline()
-            })
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            .frame( maxWidth: .infinity, alignment: .trailing)
-            
-            
-            
-            
-            
+        
+        ZStack{
+            Color.init("background").edgesIgnoringSafeArea(.all)
             
             VStack{
-                Button (action: {} ){
-                    //
-                    Text("Login")
-                        .foregroundColor(.black)
-                        .frame(width: 250, height: 15)
-                        .padding(.all)
-                }
                 
-                .background(Color("blue"))
-                .cornerRadius(4)
                 
-                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                HStack{
-                    //
-                    Rectangle()
-                        .fill(Color.gray)
-                        .frame(height: 1)
-                        .opacity(0.5)
-                        .padding(/*@START_MENU_TOKEN@*/.leading, 32.0/*@END_MENU_TOKEN@*/)
+                Text("TakeTech")
+                    .font(.largeTitle)
+                    .padding(.vertical, 60.0)
+                
+                
+                mailView(email: email)
+                
+                passView(pass: pass)
+                
+                
+                
+                
+                // Forgot Password ...
+                
+                Button(action: {} , label:{
                     
-                    Text("OR")
-                        .font(.footnote)
-                        .foregroundColor(Color.gray)
-                        .opacity(0.5)
-                    
-                    
-                    Rectangle()
-                        .fill(Color.gray)
-                        .frame(height: 1)
-                        .opacity(0.5)
-                        .padding(/*@START_MENU_TOKEN@*/.trailing, 32.0/*@END_MENU_TOKEN@*/)
-                    
-                }
-                
-                //signin with apple
-                SignInWithAppleButton(.signIn, onRequest: configure, onCompletion: handle)
-                
-                    .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
-                    .frame(width: 285, height: 47)
-                    .cornerRadius(4)
-                    .padding(.all)
-                
-                
-//                Button (action: {} ){
-//                    //
-//                    Text("Continue with Google")
-//                        .foregroundColor(.black)
-//                        .frame(width: 250, height: 15)
-//                        .padding(.all)
-//                }
-//
-//                .background(Color.white)
-//
-//                .cornerRadius(4)
-//
-//                .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
-                
-                
-                
-                HStack{
-                    Text("Don’t have an account?")
-                        .font(.footnote)
-                    
-                    Text(" Sign Up")
+                    Text("Forgot your password?")
                         .font(.footnote)
                     
                         .foregroundColor(Color("MyYellow"))
+                    
                         .underline()
+                })
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .frame( maxWidth: .infinity, alignment: .trailing)
+                
+                
+                
+                
+                
+                
+                VStack{
+                    Button (action: {} ){
+                        //
+                        Text("Login")
+                            .foregroundColor(.black)
+                            .frame(width: 250, height: 15)
+                            .padding(.all)
+                    }
+                    
+                    .background(Color("blue"))
+                    .cornerRadius(4)
+                    
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    HStack{
+                        //
+                        Rectangle()
+                            .fill(Color.gray)
+                            .frame(height: 1)
+                            .opacity(0.5)
+                            .padding(/*@START_MENU_TOKEN@*/.leading, 32.0/*@END_MENU_TOKEN@*/)
+                        
+                        Text("OR")
+                            .font(.footnote)
+                            .foregroundColor(Color.gray)
+                            .opacity(0.5)
+                        
+                        
+                        Rectangle()
+                            .fill(Color.gray)
+                            .frame(height: 1)
+                            .opacity(0.5)
+                            .padding(/*@START_MENU_TOKEN@*/.trailing, 32.0/*@END_MENU_TOKEN@*/)
+                        
+                    }
+                    
+                    //signin with apple
+                    SignInWithAppleButton(.signIn, onRequest: configure, onCompletion: handle)
+                    
+                        .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
+                        .frame(width: 285, height: 47)
+                        .cornerRadius(4)
+                        .padding(.all)
+                    
+                    
+                    //                Button (action: {} ){
+                    //                    //
+                    //                    Text("Continue with Google")
+                    //                        .foregroundColor(.black)
+                    //                        .frame(width: 250, height: 15)
+                    //                        .padding(.all)
+                    //                }
+                    //
+                    //                .background(Color.white)
+                    //
+                    //                .cornerRadius(4)
+                    //
+                    //                .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
+                    
+                    
+                    
+                    HStack{
+                        Text("Don’t have an account?")
+                            .font(.footnote)
+                        
+                        Text(" Sign Up")
+                            .font(.footnote)
+                        
+                            .foregroundColor(Color("MyYellow"))
+                            .underline()
+                        
+                    }
+                    
+                    Spacer()
+                }
+                
+            }
+        }
+        
+    }
+    
+    
+    
+    
+    
+    struct passView: View {
+        
+        
+        @State var pass: String
+        
+        var body: some View {
+            VStack{
+                
+                
+                Text("Password")
+                    .frame( maxWidth: .infinity, alignment: .leading)
+                
+                HStack(spacing: 15){
+                    
+                    Image(systemName: "lock.fill")
+                        .foregroundColor(.gray)
+                    
+                    SecureField("***********", text: self.$pass)
+                    
+                    Image(systemName: "eye.slash.fill")
+                        .foregroundColor(.gray)
+                    
+                }
+                .padding(.vertical, 8.0)
+                
+                Divider().background(Color.white.opacity(0.5))
+                
+                
+            }
+            
+            .padding(.horizontal, 32.0)
+            .padding(.top,40)
+        }
+    }
+    
+    
+    
+    struct mailView: View{
+        
+        
+        @State var email: String
+        
+        var body: some View {
+            
+            
+            VStack{
+                
+                Text("Email")
+                    .frame( maxWidth: .infinity, alignment: .leading)
+                
+                
+                HStack(spacing: 15){
+                    
+                    Image(systemName: "envelope.fill")
+                        .foregroundColor(.gray)
+                    
+                    TextField("you@example.com", text: self.$email)
+                    
                     
                 }
                 
-                Spacer()
-            }
-            
-        }
-    }
-    
-    
-
-
-
-
-
-struct passView: View {
-    
-    
-    @State var pass: String
-    
-    var body: some View {
-        VStack{
-            
-            
-            Text("Password")
-                .frame( maxWidth: .infinity, alignment: .leading)
-            
-            HStack(spacing: 15){
+                .padding(.vertical, 8.0)
                 
-                Image(systemName: "lock.fill")
-                    .foregroundColor(.gray)
-                
-                SecureField("***********", text: self.$pass)
-                
-                Image(systemName: "eye.slash.fill")
-                    .foregroundColor(.gray)
+                Divider().background(Color.white.opacity(0.5))
                 
             }
-            .padding(.vertical, 8.0)
             
-            Divider().background(Color.white.opacity(0.5))
-            
-            
-        }
-        
-        .padding(.horizontal, 32.0)
-        .padding(.top,40)
-    }
-}
-
-
-
-struct mailView: View{
-    
-    
-    @State var email: String
-    
-    var body: some View {
-    
-    
-    VStack{
-        
-        Text("Email")
-            .frame( maxWidth: .infinity, alignment: .leading)
-        
-        
-        HStack(spacing: 15){
-            
-            Image(systemName: "envelope.fill")
-                .foregroundColor(.gray)
-            
-            TextField("you@example.com", text: self.$email)
-            
+            .padding(.horizontal, 32.0)
+            .padding(.top, 1.0)
             
         }
         
-        .padding(.vertical, 8.0)
-        
-        Divider().background(Color.white.opacity(0.5))
-        
     }
     
-    .padding(.horizontal, 32.0)
-    .padding(.top, 1.0)
+    
+    struct AppleUser: Codable {
         
+        let userId: String
+        let firstName: String
+        let lastName: String
+        let email: String
+        
+        init?(credentials: ASAuthorizationAppleIDCredential){
+            
+            guard
+                let firstName = credentials.fullName?.givenName,
+                let lastName = credentials.fullName?.familyName,
+                let email = credentials.email
+            else{return nil}
+            
+            self.userId = credentials.user
+            self.firstName = firstName
+            self.lastName = lastName
+            self.email = email
+        }
     }
     
-}
-
-
-struct AppleUser: Codable {
     
-    let userId: String
-    let firstName: String
-    let lastName: String
-    let email: String
-    
-    init?(credentials: ASAuthorizationAppleIDCredential){
-        
-        guard
-            let firstName = credentials.fullName?.givenName,
-            let lastName = credentials.fullName?.familyName,
-            let email = credentials.email
-        else{return nil}
-        
-        self.userId = credentials.user
-        self.firstName = firstName
-        self.lastName = lastName
-        self.email = email
-    }
-}
-
-
     func configure(_ request: ASAuthorizationAppleIDRequest){
         
         request.requestedScopes = [.fullName, .email]

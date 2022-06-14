@@ -12,12 +12,15 @@ import SwiftUI
 struct Conditions : View {
     var body: some View {
         
-        
+        ZStack{
+            Color.init("background").edgesIgnoringSafeArea(.all)
         VStack{
             
             
             Text("Terms and Conditions")
                 .font(.largeTitle)
+            
+        }
             
         }
         
