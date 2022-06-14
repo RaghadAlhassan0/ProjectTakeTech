@@ -30,7 +30,7 @@ struct LogIn: View {
                     Image("Logo")
                         .resizable()
                         .frame(width: 100, height: 100, alignment: .center)
-                        .padding(.all, 40.0)
+//                        .padding(.all, 40.0)
                     
                     
                     
