@@ -19,6 +19,7 @@ struct LogIn: View {
     var body: some View {
         
         
+        
         ZStack{
             Color.init("background").edgesIgnoringSafeArea(.all)
             
@@ -136,6 +137,7 @@ struct LogIn: View {
                 
             }
         }
+        .navigationBarBackButtonHidden(true)
         
     }
     
