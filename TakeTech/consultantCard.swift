@@ -22,7 +22,7 @@ struct consultantCard: View {
     @State var expertRate: Double = 3.14159265358979
     @State var noOFconsultations : Int = 25
     @State var aboutExpert : String = """
-    Holds a Bachelor's degree in Information Technology, and currently work as an IT employee at the Public Telecommunications Company.  Throughout my years after graduation,  I enhanced my IT skills by working in different projects in both private and government sectors.
+    Holds a Bachelor's degree in Information Technology, and currently work as an IT employee at the Public Telecommunications Company.  Throughout my years after graduation, I I enhanced my IT skills by working in different projects in both private and government sectors.
 """
     @State var expertMajor : String = ""
     @State var sessionPrice : Int = 350
