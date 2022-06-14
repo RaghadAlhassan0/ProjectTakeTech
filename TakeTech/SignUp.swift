@@ -16,95 +16,104 @@ struct SignUp: View {
     
     var body: some View {
         
-        ZStack{
-            
-            Color.init("background").edgesIgnoringSafeArea(.all)
-            VStack{
-                Image("Logo")
-                    .resizable()
-                    .frame(width: 100, height: 100, alignment: .center)
-                    .padding(/*@START_MENU_TOKEN@*/.all, 40.0/*@END_MENU_TOKEN@*/)
-                mailView(email: email)
-                passView(pass: pass)
+        
+        NavigationView{
+            ZStack{
+                
+                Color.init("background").edgesIgnoringSafeArea(.all)
                 VStack{
-                    Button (action: {} ){
-                        Text("Sign Up")
-                            .foregroundColor(.black)
-                            .frame(width: 250, height: 15)
-                            .padding(.all)
-                    
-                    }
-                    .background(Color("blue"))
-                    .cornerRadius(4)
-                    .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing]/*@END_MENU_TOKEN@*/)
-                    // OR
-                    HStack{
-                        Rectangle()
-                            .fill(Color.gray)
-                            .frame(height: 1)
-                            .opacity(0.5)
-                            .padding(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                        Text("OR")
-                            .font(.footnote)
-                            .foregroundColor(Color.gray)
-                            .opacity(0.5)
-                        Rectangle()
-                            .fill(Color.gray)
-                            .frame(height: 1)
-                            .opacity(0.5)
-                            .padding(/*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/)
-                    }
-                    //sign up with apple
-                    SignInWithAppleButton(.signUp, onRequest: configure, onCompletion: handle)
-                        .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
-                        .frame(width: 285, height: 47)
-                        .cornerRadius(4)
-                        .padding(.all)
-                    HStack{
-                        Text("Already have an account? ")
-                            .font(.footnote)
-                        Text("Login")
-                            .font(.footnote)
-                            .foregroundColor(Color("MyYellow"))
-                            .underline()
-                    }  .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                    // I agree ...
-                   
-                    
-                    
+                    Image("Logo")
+                        .resizable()
+                        .frame(width: 100, height: 100, alignment: .center)
+                        .padding(.all, 40.0)
+                    mailView(email: email)
+                    passView(pass: pass)
                     VStack{
-                        Text("By clicking Sign up or Sign up with Apple")
+                        Button (action: {} ){
+                            Text("Sign Up")
+                                .foregroundColor(.black)
+                                .frame(width: 250, height: 15)
+                                .padding(.all)
                             
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(.white)
-                            .font(.footnote)
-                            .multilineTextAlignment(.center)
-                            .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
+                        }
+                        .background(Color("blue"))
+                        .cornerRadius(4)
+                        .padding([.leading, .bottom, .trailing])
+                        // OR
+                        HStack{
+                            Rectangle()
+                                .fill(Color.gray)
+                                .frame(height: 1)
+                                .opacity(0.5)
+                                .padding(.leading)
+                            Text("OR")
+                                .font(.footnote)
+                                .foregroundColor(Color.gray)
+                                .opacity(0.5)
+                            Rectangle()
+                                .fill(Color.gray)
+                                .frame(height: 1)
+                                .opacity(0.5)
+                                .padding(.trailing)
+                        }
+                        //sign up with apple
+                        SignInWithAppleButton(.signUp, onRequest: configure, onCompletion: handle)
+                        
+                            .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
+                            .frame(width: 285, height: 47)
+                            .cornerRadius(4)
+                            .padding(.all)
                         
                         
                         HStack{
-                       Text("you agree to our")
-                                
+                            Text("Already have an account? ")
+                                .font(.footnote)
+                            Text("Login")
+                                .font(.footnote)
+                                .foregroundColor(Color("MyYellow"))
+                                .underline()
+                        }  .padding(.all)
+                        
+                        
+                        // I agree ...
+                        
+                        
+                        
+                        VStack{
+                            Text("By clicking Sign up or Sign up with Apple")
+                            
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.white)
                                 .font(.footnote)
                                 .multilineTextAlignment(.center)
+                                .padding([.top, .leading, .trailing])
                             
-                        
-                        Button(action: {} , label:{
-                            Text( "Terms and Conditions")
-                                .foregroundColor(Color("MyYellow"))
-                                .font(.footnote)
-                                .underline()
-                        })
+                            
+                            HStack{
+                                Text("you agree to our")
+                                
+                                    .multilineTextAlignment(.center)
+                                    .foregroundColor(.white)
+                                    .font(.footnote)
+                                    .multilineTextAlignment(.center)
+                                
+                                
+                                Button(action: {} , label:{
+                                    Text( "Terms and Conditions")
+                                        .foregroundColor(Color("MyYellow"))
+                                        .font(.footnote)
+                                        .underline()
+                                })
+                            }
+                        }
                     }
-                    }
+                    .padding(.all)
+                    .padding(.top, 6.0)
+                    Spacer()
                 }
-                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                .padding(.top, 6.0)
-                Spacer()
             }
-        }
+        } .navigationBarHidden(true)
+        
     }
 }
 
