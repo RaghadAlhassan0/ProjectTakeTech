@@ -73,7 +73,7 @@ struct LogIn: View {
                         .background(Color("blue"))
                         .cornerRadius(4)
                         
-                        .padding(.all)
+                        .padding([.leading, .bottom, .trailing])
                         HStack{
                             //
                             Rectangle()
@@ -167,7 +167,7 @@ struct LogIn: View {
             }
             
             .padding(.horizontal, 32.0)
-            .padding(.top,40)
+            .padding(.top)
         }
     }
     
