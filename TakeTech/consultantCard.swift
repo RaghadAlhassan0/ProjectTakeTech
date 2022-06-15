@@ -53,6 +53,11 @@ struct ConsultationCell: View {
                 Text("\(card.noOFconsultations) Consultations")
                   .font(.custom("Number", size: 10))
               }
+                
+                
+                
+                
+                
             }.padding(.leading, 5.0)
 
             Spacer()
