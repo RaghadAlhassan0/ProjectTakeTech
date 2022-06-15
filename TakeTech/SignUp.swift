@@ -116,7 +116,9 @@ struct SignUp: View {
                     Spacer()
                 }
             }
-        } .navigationBarHidden(true)
+            
+        } .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
         
     }
 }
