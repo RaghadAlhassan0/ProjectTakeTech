@@ -34,7 +34,7 @@ struct ConsultationCell: View {
           ZStack{
 //
             VideoPlayer(player: AVPlayer(url: URL(string: card.imageVideoName)!))
-              .frame(width: 358, height: 200)
+                  .frame(width: .infinity, height: 200)
           }
           HStack{
             Image(card.ImageURL)
@@ -140,8 +140,10 @@ struct ConsultationCell: View {
         }
         .background(Color("gray")).cornerRadius(6)
         .padding([.leading, .bottom, .trailing], 16.0)
-        .sheet(isPresented: $showCardDetails) {
-            Text("Card details")
+//        .sheet(isPresented: $showCardDetails)
+        .fullScreenCover(isPresented: $showCardDetails)
+          {
+           CardDetails(Card: card)
         }
       }
     // }
