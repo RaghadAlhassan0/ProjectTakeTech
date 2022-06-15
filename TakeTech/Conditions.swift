@@ -12,6 +12,8 @@ import SwiftUI
 struct Conditions : View {
     var body: some View {
         
+        NavigationView{
+
         ZStack{
             Color.init("background").edgesIgnoringSafeArea(.all)
         VStack{
@@ -30,7 +32,8 @@ struct Conditions : View {
             
         }
         
-        
+        }.navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
     }
     
 }
