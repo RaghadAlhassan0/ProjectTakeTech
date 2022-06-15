@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EditProfile: View {
+struct EditProfileView: View {
     @State var changeProfileImage = false
     @State var changeAvatarImage = false
     @State var openCameraRoll = false
@@ -174,7 +174,7 @@ struct EditProfile: View {
 
 struct EditProfile_Previews: PreviewProvider {
     static var previews: some View {
-        EditProfile()
+        EditProfileView()
             .preferredColorScheme(.dark)
     }
 }

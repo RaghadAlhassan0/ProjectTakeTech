@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct userProfile: View {
+struct userProfileView: View {
     @State var imageUrl: String = "mohammed"
     @State var name : String = "Mohammed"
     @State var email : String = "Moham@gmail.com"
@@ -162,7 +162,7 @@ struct userProfile: View {
 
 struct userProfile_Previews: PreviewProvider {
     static var previews: some View {
-        userProfile()
+        userProfileView()
             .preferredColorScheme(.dark)
     }
 }

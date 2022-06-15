@@ -4,10 +4,10 @@
 //
 //  Created by Arwa Alzahrani on 15/11/1443 AH.
 //
-
-
-
 import SwiftUI
+
+
+
 
 struct searchBarview: View {
 
