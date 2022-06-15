@@ -142,7 +142,7 @@ struct userProfileView: View {
             .navigationBarTitleDisplayMode(.inline)
             
             .toolbar() {
-                NavigationLink(destination: EditProfile()) {
+                NavigationLink(destination: EditProfileView()) {
                     Text("Edit")
                         .font(.system(size: 17))
                         .foregroundColor(Color("blue"))
