@@ -82,7 +82,7 @@ struct userProfileView: View {
                                     .padding(.trailing, 16.0)
                                 Text(password)
                                     .font(.system(size: 14))
-                                
+                                    
                             }
                             Divider()
                             HStack{
@@ -93,11 +93,12 @@ struct userProfileView: View {
                                     .foregroundColor(.gray)
                                 
                                     .padding(.trailing, 2.0)
-                                NavigationLink(destination: Fivorite()) {
+                                NavigationLink(destination: EmptyView()) {
                                     Text("My Favorite")
-                                        .lineLimit(1)
+//                                        .lineLimit(1)
                                         .font(.system(size: 14))
                                         .foregroundColor(Color.white)
+                                        .padding()
                                     Spacer()
                                     Image(systemName:"chevron.forward")
                                   
@@ -105,7 +106,7 @@ struct userProfileView: View {
 //                                        .padding(.trailing, 8.0)
 //
                                         .foregroundColor(.white)
-                                }.padding(.horizontal,16)
+                                }.padding(.horizontal,0)
                                 
                                 
                                 

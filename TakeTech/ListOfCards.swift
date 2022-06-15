@@ -9,7 +9,7 @@ import SwiftUI
 
 
 
-struct searchBarview: View {
+struct ListOfCards: View {
 
    @State var searchtext = ""
     @State var isSearching = false
@@ -42,11 +42,13 @@ struct searchBarview: View {
                 })
                 .overlay(HStack{
                     Image(systemName: "magnifyingglass")
+                        .foregroundColor(.gray)
                     Spacer()
                     
                     if isSearching {
                         
                         Button (action: {searchtext = ""}, label: { Image(systemName: "xmark.circle.fill")
+                                .foregroundColor(.gray)
                                 .foregroundColor(.white)
                             
                         })
@@ -97,7 +99,7 @@ struct searchBarview: View {
 
 struct searchBarview_Previews: PreviewProvider {
     static var previews: some View {
-        searchBarview()
+        ListOfCards()
             .preferredColorScheme(.dark)
     }
 }

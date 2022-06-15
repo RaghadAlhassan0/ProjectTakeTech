@@ -18,8 +18,7 @@ struct TabBar: View {
         TabView {
             
             
-            Text("Consul...")
-            
+            ListOfCards()
                 .tabItem {
                     Image(systemName:"bubble.left.and.exclamationmark.bubble.right.fill")
                     
@@ -37,7 +36,7 @@ struct TabBar: View {
                     Text("Sessions")
                 }
             
-            Text("Prof..")
+            userProfileView()
                 .tabItem {
                     Image(systemName: "person")
                     Text("Profile")

@@ -22,6 +22,8 @@ struct ConsultationCell: View {
   @State var showFavourite5 : Bool = false
   @State var favoriteArry = [String]()
   @State var favouriteArr = []
+    
+    @State var showCardDetails = false
 
   //  --------------------
   var body: some View {
@@ -97,6 +99,11 @@ struct ConsultationCell: View {
           VStack{
             Text("\(card.description)").lineLimit(15)
               .font(.custom("text", size: 12))
+              .onTapGesture {
+                  
+                  showCardDetails.toggle()
+              }
+              //+Text("...")
             Text("")
             Text(card.major)
               .font(.custom("Specialize", size: 12))
@@ -119,6 +126,8 @@ struct ConsultationCell: View {
           }.padding(.bottom, 8.0)
             .padding(.horizontal, 25)
           Button {
+              
+              
           } label: {
             Text("Book")
               .foregroundColor(.black)
@@ -131,6 +140,9 @@ struct ConsultationCell: View {
         }
         .background(Color("gray")).cornerRadius(6)
         .padding([.leading, .bottom, .trailing], 16.0)
+        .sheet(isPresented: $showCardDetails) {
+            Text("Card details")
+        }
       }
     // }
   }
