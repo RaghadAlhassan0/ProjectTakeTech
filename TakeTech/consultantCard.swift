@@ -5,130 +5,140 @@
 //  Created by Arwa Alzahrani on 01/11/1443 AH.
 //
 
+
+
+//
+import AVKit
 import SwiftUI
+struct ConsultationCell: View {
+//  let appetizer : Appetizer
+  @EnvironmentObject var viewModel : pageFavo
+  let card : Card
+  @State var items = []
+  @State var showFavourite : Bool = false
+  @State var showFavourite2 : Bool = false
+  @State var showFavourite3 : Bool = false
+  @State var showFavourite4 : Bool = false
+  @State var showFavourite5 : Bool = false
+  @State var favoriteArry = [String]()
+  @State var favouriteArr = []
 
-struct consultantCard: View {
-    var PictureArr = ["man1" , "man2" , "man3"]
-    var userName = ["Henry J" , "Khalid Almonyr" , "Noura Alsalem" ]
-    var rate = "star.fill"
-    var numOfConsulation = 350
-    var discription = ""
-    var price = Int()
-    var sessionTime = Int()
-    
-    
-    var body: some View {
-        ZStack{
-            Color.init("background").edgesIgnoringSafeArea(.all)
+  //  --------------------
+  var body: some View {
+    // ForEach(cardmodel.samples, id: \.self){ cr in
+      ZStack{
+        Color.init("background").edgesIgnoringSafeArea(.all)
+        VStack{
+          ZStack{
+//
+            VideoPlayer(player: AVPlayer(url: URL(string: card.imageVideoName)!))
+              .frame(width: 358, height: 200)
+          }
+          HStack{
+            Image(card.ImageURL)
+              .resizable()
+              .frame(width: 44, height: 44, alignment: .trailing)
+              .clipShape(Circle())
+            VStack (alignment: .leading){
+              Text(card.name)
+                .font(.system(size: 16, weight: .semibold, design: .default))
+                .fontWeight(.medium)
+              HStack{
+                Image.init(systemName: "star.fill" )
+                  .font(.custom( "star", size: 14))
+                  .foregroundColor(Color.init("MyYellow"))
+                Text(String(format:" %.2f", card.rating))
+                //Text("\(Card.rating)")
+                  .font(.custom("Number", size: 10))
+                Text("\(card.noOFconsultations) Consultations")
+                  .font(.custom("Number", size: 10))
+              }
+                
+                
+                
+                
+                
+            }.padding(.leading, 5.0)
+
+            Spacer()
+
+          }
+          .padding()
             
-           
-                VStack{
-                    ZStack{
-                Image.init(PictureArr[0])
-                    .resizable()
-                    .frame(width: 358, height: 196)
-                    .padding(.top, -17.0)
-                        Image.init("play")
-                            .resizable()
-                            .frame(width: 31, height: 30, alignment: .center)
-                        
-                    }
-                 
-                    HStack{
-                        
-                        
-                        Image("avatar")
-                            .resizable()
-                            .frame(width: 44, height: 44, alignment: .trailing)
-                            .clipShape(Circle())
-                            
-                        
-                            
-                        
-                        
-                        
-                        
-                        VStack (alignment: .leading){
-                            Text(userName[0])
-                                .font(.system(size: 16, weight: .semibold, design: .default))
-                                    .fontWeight(.medium)
-                            
-                            HStack{
-                            Image.init(systemName: rate )
-                                    .font(.custom( "star", size: 14))
-                                .foregroundColor(.yellow)
-                                
-                                Text("4.84")
-                                    .font(.custom("Number", size: 10))
-                                Text("\(numOfConsulation) Consultations")
-                                    .font(.custom("Number", size: 10))
-                                
-                                
-                            }
-                        }.padding(.leading, 5.0)
-                        
-                        Spacer()
-                        Image.init(systemName: "heart")
-                        
-                        
-//                        ---------------Vstack
-                        
-                    }
-                    
-                    .padding()
-                    
-                    VStack{
-                        Text("""
-                    Holds a Bachelor's degree in Information Technology, an employee at the Public Telecommunications...
-                    """)
-                        .font(.custom("text", size: 12))
-                        .multilineTextAlignment(.leading)
-                   
-                  
-                    
-                    Text("Information technology")
-                        .font(.custom("Specialize", size: 12))
-                        .foregroundColor(.init("blue"))
-                        .padding(.leading, -145.0)
-                        .padding(.vertical, 3.0)
-                    } .padding(.horizontal)
-                    
-                    Divider().padding(.horizontal, 45.0)
-                    
-                    HStack{
-                        
-                        Text("100")
-                            .font(.custom("price", size: 16))
-                            .foregroundColor(.yellow)
-                            .fontWeight(.semibold)
-                        Text(" / 30 Minutes")
-                            .font(.custom("Number", size: 11))
-                            .foregroundColor(.gray)
-                        
-                        Spacer()
-                    }.padding(.bottom, 8.0)
-                        .padding(.horizontal, 25)
-                   
-                    
-                    Text("Book")
-                        .foregroundColor(.black)
-                       .frame(width: 312.02, height: 40, alignment: .center)
-                       .background(.foreground)
-                       .cornerRadius(6)
-                       .foregroundColor(.init("blue"))
-                       .padding(.bottom)
-                    
-                    
-                    
-                }.background(Color("gray")).cornerRadius(6).frame(width: 358, height: .infinity, alignment: .center)
-            
+          .overlay(HStack(alignment: .top){
+              Spacer()
+              if showFavourite{
+                Button {
+  //                   تعددديل خوله ------
+  //                viewModel.add(Card)
+                  showFavourite.toggle()
+  //                favouriteArr
+                } label: {
+                  Image(systemName: ("heart.fill"))
+                    .resizable().frame(width: 20, height: 18)
+                    .foregroundColor(Color.white).padding(.vertical, 11.0)
+                }
+              }
+              //            favouriteArr.append()
+              else{
+                VStack.init( alignment: .trailing, spacing: 20){
+                  Button {
+                    showFavourite.toggle()
+                  } label: {
+                    Image(systemName: ("suit.heart"))
+                      .resizable().frame(width: 20, height: 18)
+                      .foregroundColor(Color.white).padding(.vertical, 11.0)
+                  }
+                }
+              }
+          }.padding(.horizontal , 16)
+          
+          )
+          VStack{
+            Text("\(card.description)").lineLimit(15)
+              .font(.custom("text", size: 12))
+            Text("")
+            Text(card.major)
+              .font(.custom("Specialize", size: 12))
+              .foregroundColor(.init("blue"))
+              .padding(.leading, -145.0)
+              .padding(.vertical, 3.0)
+          } .padding(.horizontal)
+          Divider().padding(.horizontal, 45.0)
+          HStack{
+            Text("")
+            Text("\(card.price) SR")
+              .font(.custom("price", size: 16))
+              .foregroundColor(Color.init("MyYellow"))
+              .fontWeight(.semibold)
+            Text("")
+            Text(" / \(card.minutes) Minutes")
+              .font(.custom("Number", size: 13))
+              .foregroundColor(.gray)
+            Spacer()
+          }.padding(.bottom, 8.0)
+            .padding(.horizontal, 25)
+          Button {
+          } label: {
+            Text("Book")
+              .foregroundColor(.black)
+              .frame(width: 312.02, height: 40, alignment: .center)
+              .background(.foreground)
+              .cornerRadius(6)
+              .foregroundColor(.init("blue"))
+              .padding(.bottom)
+          }
         }
-    }
+        .background(Color("gray")).cornerRadius(6)
+        .padding([.leading, .bottom, .trailing], 16.0)
+      }
+    // }
+  }
+}
+struct ConsultationCell_Previews: PreviewProvider {
+  static var previews: some View {
+    ConsultationCell(card: cardmodel.samples[0])
+      .preferredColorScheme(.dark)
+  }
 }
 
-struct consultantCard_Previews: PreviewProvider {
-    static var previews: some View {
-        consultantCard()
-            .preferredColorScheme(.dark)
-    }
-}

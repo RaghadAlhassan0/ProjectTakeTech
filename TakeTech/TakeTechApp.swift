@@ -10,10 +10,12 @@ import Firebase
 
 @main
 struct TakeTechApp: App {
+    @StateObject var viewModel = pageFavo()
     init(){FirebaseApp.configure()}
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
         }
     }
 }
