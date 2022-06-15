@@ -11,50 +11,53 @@ import SwiftUI
 
 struct FirstPage: View {
     var body: some View {
-       
         
-        VStack{
-            
-            Spacer()
-            
-            Text("TakeTech")
-                .font(.largeTitle)
-            
-            
-            Spacer()
-            
-            
-
-            Button (action: {} ){
-
-                Text("I need a consultant")
-                    .foregroundColor(.black)
-                    .frame(width: 250, height: 15)                    .padding(.all)
+        ZStack{
+            Color.init("background").edgesIgnoringSafeArea(.all)
+            VStack{
+                
+                Spacer()
+                
+          Image("Logo")
+                    .resizable()
+                    .frame(width: 200, height: 200, alignment: .center)
+                    
+                
+                
+                Spacer()
+                
+                
+                
+                Button (action: {} ){
+                    
+                    Text("I need a consultant")
+                        .foregroundColor(.black)
+                        .frame(width: 250, height: 15)                    .padding(.all)
+                }
+                
+                .background(Color("blue"))
+                .cornerRadius(4)
+                .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
+                
+                
+                
+                
+                Button (action: {} ){
+                    
+                    Text("I'm a consultant")
+                        .foregroundColor(.white)
+                        .frame(width: 250, height: 15)
+                        .padding(.all)
+                }
+                
+                .background(RoundedRectangle(cornerRadius: 4.0).stroke(Color.white))
+                
+                .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
+                
+                
+                Spacer()
+                
             }
-            
-            .background(Color("blue"))
-            .cornerRadius(4)
-            .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
-
-              
-            
-
-            Button (action: {} ){
-
-                Text("I'm a consultant")
-                    .foregroundColor(.white)
-                    .frame(width: 250, height: 15)
-                    .padding(.all)
-            }
-            
-            .background(RoundedRectangle(cornerRadius: 4.0).stroke(Color.white))
-
-            .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
-
-            
-            Spacer()
-            
-            
         }
         
         
