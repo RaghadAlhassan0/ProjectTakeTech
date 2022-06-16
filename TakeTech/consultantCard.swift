@@ -131,7 +131,7 @@ struct ConsultationCell: View {
           } label: {
             Text("Book")
               .foregroundColor(.black)
-              .frame(width: 312.02, height: 40, alignment: .center)
+              .frame(width: 340, height: 40, alignment: .center)
               .background(.foreground)
               .cornerRadius(6)
               .foregroundColor(.init("blue"))

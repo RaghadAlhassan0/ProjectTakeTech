@@ -39,7 +39,7 @@ struct CardDetails: View {
                         HStack{
                         
                         
-                        Image("avatar")
+                            Image(Card.ImageURL)
                             .resizable()
                             .frame(width: 44, height: 44, alignment: .trailing)
                             .clipShape(Circle())
@@ -118,12 +118,7 @@ struct CardDetails: View {
                 
                 
                     
-                    Text("""
-ffff
-ffff
-ffff
-fff
-""")
+                    Text(Card.description)
                 Button {
                     
                 } label: {
