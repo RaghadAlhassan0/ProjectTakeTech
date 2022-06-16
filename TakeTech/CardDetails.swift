@@ -119,27 +119,36 @@ struct CardDetails: View {
                 
                     
                     Text(Card.description)
-                Button {
-                    
-                } label: {
-                    Text("Book")
-                        .foregroundColor(.black)
-                        .frame(width: 312.02, height: 40, alignment: .center)
-                        .background(.foreground)
-                        .cornerRadius(6)
-                        .foregroundColor(.init("blue"))
-                        .padding(.bottom)
-                }}
-//                .frame(width: .infinity, height: 680, alignment: .center)
+                        .font(.custom("text", size: 16))
+                        .padding(.horizontal, 32)
+             }
+                .frame(width: .infinity, height: 680, alignment: .top)
 //                .padding(.horizontal, 16.0)
+                
+                VStack{
+                    Spacer()
+                    Button {
+                        
+                    } label: {
+                        Text("Book")
+                            .foregroundColor(.black)
+                            .frame(width: 312.02, height: 40, alignment: .center)
+                            .background(.foreground)
+                            .cornerRadius(6)
+                            .foregroundColor(.init("blue"))
+                            .padding(.bottom)
+                    }
+                }.frame(width: .infinity, height: .infinity, alignment: .center)
                 
             }
             
             
             .navigationTitle("About me")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(false)
             
         }
+        
     }
 }
 
