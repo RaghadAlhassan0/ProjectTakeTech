@@ -148,6 +148,7 @@ struct ConsultationCell: View {
                 } label: {
                     Text("Book")
                         .foregroundColor(.black)
+                        .fontWeight(.medium)
                         .frame(width: 340, height: 40, alignment: .center)
                         .background(.foreground)
                         .cornerRadius(6)

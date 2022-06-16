@@ -62,12 +62,16 @@ struct LogIn: View {
                     
                     
                     VStack{
+                        
                         Button (action: {} ){
                             //
+                            
                             Text("Login")
+                                .fontWeight(.medium)
                                 .foregroundColor(.black)
                                 .frame(width: 250, height: 15)
                                 .padding(.all)
+                            
                         }
                         
                         .background(Color("blue"))
@@ -115,6 +119,7 @@ struct LogIn: View {
                             NavigationLink{
                                 SignUp()}label:{
                             Text(" Sign Up")
+                                        .fontWeight(.medium)
                                 .font(.footnote)
                             
                                 .foregroundColor(Color("MyYellow"))
@@ -124,7 +129,7 @@ struct LogIn: View {
                         }
                         
                         Spacer()
-                    }
+                    }.padding()
                     
                 }
             }

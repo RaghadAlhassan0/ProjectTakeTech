@@ -124,6 +124,7 @@ struct userProfileView: View {
                         }) {
                             Text("Log Out")
                                 .foregroundColor(.red)
+                                .fontWeight(.medium)
                                 .frame(width: 285, height: 40, alignment: .center)
                             
                             

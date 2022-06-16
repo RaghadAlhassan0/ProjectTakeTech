@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01D7D967285B29AC00F262CA /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7D966285B29AC00F262CA /* ScheduleModel.swift */; };
+		01D7D96B285B2A8900F262CA /* scheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7D96A285B2A8900F262CA /* scheduleView.swift */; };
+		01D7D96F285B2AD400F262CA /* upExpertSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7D96E285B2AD400F262CA /* upExpertSession.swift */; };
+		01D7D973285B2B4500F262CA /* paymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7D972285B2B4500F262CA /* paymentView.swift */; };
+		01D7D975285B2BBD00F262CA /* importFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7D974285B2BBD00F262CA /* importFile.swift */; };
+		01D7D977285B2BE300F262CA /* pastExpertSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7D976285B2BE300F262CA /* pastExpertSession.swift */; };
+		01D7D979285B2C7300F262CA /* SingUpConfirmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7D978285B2C7300F262CA /* SingUpConfirmedView.swift */; };
 		091FA2F22845D7D70035F3F4 /* TakeTechApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091FA2F12845D7D70035F3F4 /* TakeTechApp.swift */; };
 		091FA2F42845D7D70035F3F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091FA2F32845D7D70035F3F4 /* ContentView.swift */; };
 		091FA2F62845D7D70035F3F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 091FA2F52845D7D70035F3F4 /* Assets.xcassets */; };
@@ -40,6 +47,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01D7D966285B29AC00F262CA /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		01D7D96A285B2A8900F262CA /* scheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleView.swift; sourceTree = "<group>"; };
+		01D7D96E285B2AD400F262CA /* upExpertSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upExpertSession.swift; sourceTree = "<group>"; };
+		01D7D972285B2B4500F262CA /* paymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymentView.swift; sourceTree = "<group>"; };
+		01D7D974285B2BBD00F262CA /* importFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = importFile.swift; sourceTree = "<group>"; };
+		01D7D976285B2BE300F262CA /* pastExpertSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pastExpertSession.swift; sourceTree = "<group>"; };
+		01D7D978285B2C7300F262CA /* SingUpConfirmedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpConfirmedView.swift; sourceTree = "<group>"; };
 		091FA2EE2845D7D70035F3F4 /* TakeTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		091FA2F12845D7D70035F3F4 /* TakeTechApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeTechApp.swift; sourceTree = "<group>"; };
 		091FA2F32845D7D70035F3F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,10 +129,14 @@
 				091FA3042845E3040035F3F4 /* consultantCard.swift */,
 				098E83F2285A46E40011AFC6 /* CardDetails.swift */,
 				8828DE7D285726D800325CDF /* Review.swift */,
-				8828DE7F285726F500325CDF /* SessionConfirmedView.swift */,
 				8828DE812857273F00325CDF /* SessionView.swift */,
+				8828DE7F285726F500325CDF /* SessionConfirmedView.swift */,
+				01D7D978285B2C7300F262CA /* SingUpConfirmedView.swift */,
 				098E83892859C3C70011AFC6 /* userProfileView.swift */,
 				098E838B2859C3C70011AFC6 /* EditProfileView.swift */,
+				01D7D972285B2B4500F262CA /* paymentView.swift */,
+				01D7D974285B2BBD00F262CA /* importFile.swift */,
+				01D7D96A285B2A8900F262CA /* scheduleView.swift */,
 				10C56F1B2855E58100A55DD8 /* GoogleService-Info.plist */,
 				091FA2F52845D7D70035F3F4 /* Assets.xcassets */,
 				098E83852859C3C70011AFC6 /* Favorite View */,
@@ -139,6 +157,7 @@
 		098E83842859C3750011AFC6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				01D7D966285B29AC00F262CA /* ScheduleModel.swift */,
 				092FCC3828585DFD002BE83D /* DataPerson.swift */,
 			);
 			path = Data;
@@ -159,6 +178,8 @@
 			children = (
 				098E838A2859C3C70011AFC6 /* ImagePicker.swift */,
 				098E838C2859C3C70011AFC6 /* profileImageMod.swift */,
+				01D7D976285B2BE300F262CA /* pastExpertSession.swift */,
+				01D7D96E285B2AD400F262CA /* upExpertSession.swift */,
 				8828DE752857265000325CDF /* TabBar.swift */,
 				8828DE772857268600325CDF /* TabBarConsu.swift */,
 				8828DE792857269B00325CDF /* PastCard.swift */,
@@ -252,21 +273,28 @@
 				106CE6D02847EFE200E394BB /* sheetView.swift in Sources */,
 				098E838D2859C3C70011AFC6 /* FavoriteCard.swift in Sources */,
 				098E83F3285A46E40011AFC6 /* CardDetails.swift in Sources */,
+				01D7D973285B2B4500F262CA /* paymentView.swift in Sources */,
 				098E83912859C3C70011AFC6 /* ImagePicker.swift in Sources */,
+				01D7D975285B2BBD00F262CA /* importFile.swift in Sources */,
 				106CE6CC2847EF9900E394BB /* LogIn.swift in Sources */,
 				8828DE80285726F500325CDF /* SessionConfirmedView.swift in Sources */,
 				8828DE7C285726B200325CDF /* Upcoming.swift in Sources */,
 				106CE6CE2847EFBF00E394BB /* SignUp.swift in Sources */,
 				8828DE762857265000325CDF /* TabBar.swift in Sources */,
 				8828DE7E285726D800325CDF /* Review.swift in Sources */,
+				01D7D979285B2C7300F262CA /* SingUpConfirmedView.swift in Sources */,
 				8828DE822857273F00325CDF /* SessionView.swift in Sources */,
 				091FA2F42845D7D70035F3F4 /* ContentView.swift in Sources */,
 				092FCC3B285867A3002BE83D /* ListOfCards.swift in Sources */,
+				01D7D977285B2BE300F262CA /* pastExpertSession.swift in Sources */,
 				098E83922859C3C70011AFC6 /* EditProfileView.swift in Sources */,
 				098E83902859C3C70011AFC6 /* userProfileView.swift in Sources */,
+				01D7D967285B29AC00F262CA /* ScheduleModel.swift in Sources */,
 				8828DE7A2857269B00325CDF /* PastCard.swift in Sources */,
 				098E838F2859C3C70011AFC6 /* Fivorite.swift in Sources */,
 				091FA3052845E3040035F3F4 /* consultantCard.swift in Sources */,
+				01D7D96B285B2A8900F262CA /* scheduleView.swift in Sources */,
+				01D7D96F285B2AD400F262CA /* upExpertSession.swift in Sources */,
 				091FA2F22845D7D70035F3F4 /* TakeTechApp.swift in Sources */,
 				098E838E2859C3C70011AFC6 /* EmptyState.swift in Sources */,
 				106CE6CA2847EF6D00E394BB /* FirstPage.swift in Sources */,
@@ -409,6 +437,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,6 +470,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

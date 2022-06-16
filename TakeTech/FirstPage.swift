@@ -25,10 +25,6 @@ struct FirstPage: View {
                 
                 
                 
-                
-                
-                
-                
                 Spacer()
                 
                 
@@ -36,6 +32,7 @@ struct FirstPage: View {
                 Button (action: {} ){
                     
                     Text("I need a consultant")
+                        .fontWeight(.medium)
                         .foregroundColor(.black)
                         .frame(width: 250, height: 15)                    .padding(.all)
                 }
@@ -50,6 +47,7 @@ struct FirstPage: View {
                 Button (action: {} ){
                     
                     Text("I'm a consultant")
+                        .fontWeight(.medium)
                         .foregroundColor(.white)
                         .frame(width: 250, height: 15)
                         .padding(.all)

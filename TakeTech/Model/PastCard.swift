@@ -69,6 +69,7 @@ struct PastCard: View {
                         
                         Text("Book")
                             .foregroundColor(.black)
+                            .fontWeight(.medium)
                             .frame(width: 292, height: 32, alignment: .center)
                             .font(.system(size: 15))
                             .background(.foreground)

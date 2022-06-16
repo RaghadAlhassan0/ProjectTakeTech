@@ -34,6 +34,7 @@ struct SignUp: View {
                     VStack{
                         Button (action: {} ){
                             Text("Sign Up")
+                                .fontWeight(.medium)
                                 .foregroundColor(.black)
                                 .frame(width: 250, height: 15)
                                 .padding(.all)

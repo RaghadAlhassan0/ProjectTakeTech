@@ -143,6 +143,7 @@ struct EditProfileView: View {
                         
                         Text("Save")
                             .foregroundColor(.black)
+                            .fontWeight(.medium)
                             .frame(width: 285, height: 40, alignment: .center)
                             .background(.foreground)
                             .cornerRadius(6)

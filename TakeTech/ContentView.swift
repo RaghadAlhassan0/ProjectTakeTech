@@ -12,7 +12,7 @@ struct ContentView: View {
      
         
 //    TabBar()
-        SignUp()
+        importFile()
     }
 }
 

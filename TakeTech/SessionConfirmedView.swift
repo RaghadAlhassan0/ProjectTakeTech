@@ -20,12 +20,12 @@ struct SessionConfirmedView: View {
                     
                     Image(systemName: "checkmark.circle")
                         .resizable()
-                        .foregroundColor(.yellow)
-                    // .foregroundColor(.init("blue"))
+                        .foregroundColor(Color("MyYellow"))
                         .frame(width:63, height:63)
                         .padding(.horizontal, 177.0)
                         .padding(.top, 16.0)
                         .padding(.vertical, 1.0)
+                        .font(Font.title.weight(.ultraLight))
                     
                 }
                 
@@ -143,6 +143,7 @@ struct SessionConfirmedView: View {
                         
                         Text("Done")
                             .foregroundColor(.black)
+                            .fontWeight(.medium)
                             .frame(width: 285, height: 40, alignment: .center)
                             .background(.foreground)
                             .cornerRadius(6)

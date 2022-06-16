@@ -132,6 +132,7 @@ struct CardDetails: View {
                     } label: {
                         Text("Book")
                             .foregroundColor(.black)
+                            .fontWeight(.medium)
                             .frame(width: 312.02, height: 40, alignment: .center)
                             .background(.foreground)
                             .cornerRadius(6)

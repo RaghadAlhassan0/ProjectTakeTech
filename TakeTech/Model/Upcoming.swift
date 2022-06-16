@@ -51,7 +51,7 @@ struct Upcoming: View {
                     
                     Text("10 / 05 / 2022     -     02:30 PM")
                         .font(.system(size: 12, weight: .semibold, design: .default))
-                        .fontWeight(.semibold)
+                        .fontWeight(.medium)
                         .foregroundColor(Color.gray)
                         .padding(.trailing, -3.0)
                     
@@ -69,6 +69,7 @@ struct Upcoming: View {
                         
                         Text("Enter")
                             .foregroundColor(.black)
+                            .fontWeight(.medium)
                             .frame(width: 157, height: 30, alignment: .center)
                             .font(.system(size: 15))
                             .background(.foreground)
@@ -85,6 +86,7 @@ struct Upcoming: View {
                             
                             
                             Text("Cancel")
+                                .fontWeight(.medium)
                                 .foregroundColor(.red)
                                 .frame(width: 157, height:30 , alignment: .center)
                                 .font(.system(size: 15))
