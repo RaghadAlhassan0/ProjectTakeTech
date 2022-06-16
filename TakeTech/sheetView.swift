@@ -9,10 +9,12 @@
 
 import SwiftUI
 
-struct Conditions : View {
+struct sheetView : View {
+    
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         
-        NavigationView{
+//        NavigationView{
             
             ZStack{
                 Color.init("background").edgesIgnoringSafeArea(.all)
@@ -24,7 +26,8 @@ struct Conditions : View {
                     Image("Logo")
                         .resizable()
                         .frame(width: 100, height: 100, alignment: .center)
-                        .padding(.top, -50.0)
+                        .padding(.top, 40.0)
+
                     
                     ScrollView(.vertical){
                         Text("The first party retains property rights. In the event of a violation or breach by the second party,the second party obligated to compensate the first party for psychological and material damage. The parties are also obligated to:" )
@@ -48,23 +51,23 @@ struct Conditions : View {
                         Spacer()
                     }
                     
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .padding(.all)
                     
                     
                 }
             }
             
-        }
+//        }
     }
     
 }
 
 struct Conditions_Previews: PreviewProvider {
     static var previews: some View {
-        Conditions()
-        
+        sheetView()
+
             .preferredColorScheme(.dark)
-        
+
     }
 }
 

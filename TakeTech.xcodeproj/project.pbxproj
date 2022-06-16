@@ -25,7 +25,7 @@
 		106CE6CA2847EF6D00E394BB /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CE6C92847EF6D00E394BB /* FirstPage.swift */; };
 		106CE6CC2847EF9900E394BB /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CE6CB2847EF9900E394BB /* LogIn.swift */; };
 		106CE6CE2847EFBF00E394BB /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CE6CD2847EFBF00E394BB /* SignUp.swift */; };
-		106CE6D02847EFE200E394BB /* Conditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CE6CF2847EFE200E394BB /* Conditions.swift */; };
+		106CE6D02847EFE200E394BB /* sheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CE6CF2847EFE200E394BB /* sheetView.swift */; };
 		10C56F1C2855E58100A55DD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10C56F1B2855E58100A55DD8 /* GoogleService-Info.plist */; };
 		10C56F1F2855E66400A55DD8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 10C56F1E2855E66400A55DD8 /* FirebaseAuth */; };
 		10C56F212855E66400A55DD8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 10C56F202855E66400A55DD8 /* FirebaseFirestore */; };
@@ -59,7 +59,7 @@
 		106CE6C92847EF6D00E394BB /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
 		106CE6CB2847EF9900E394BB /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		106CE6CD2847EFBF00E394BB /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
-		106CE6CF2847EFE200E394BB /* Conditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
+		106CE6CF2847EFE200E394BB /* sheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sheetView.swift; sourceTree = "<group>"; };
 		10C56F1A2851D41000A55DD8 /* TakeTech.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TakeTech.entitlements; sourceTree = "<group>"; };
 		10C56F1B2855E58100A55DD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8828DE752857265000325CDF /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				106CE6C92847EF6D00E394BB /* FirstPage.swift */,
 				106CE6CD2847EFBF00E394BB /* SignUp.swift */,
 				106CE6CB2847EF9900E394BB /* LogIn.swift */,
-				106CE6CF2847EFE200E394BB /* Conditions.swift */,
+				106CE6CF2847EFE200E394BB /* sheetView.swift */,
 				091FA3042845E3040035F3F4 /* consultantCard.swift */,
 				098E83F2285A46E40011AFC6 /* CardDetails.swift */,
 				8828DE7D285726D800325CDF /* Review.swift */,
@@ -249,7 +249,7 @@
 			files = (
 				098E83932859C3C70011AFC6 /* profileImageMod.swift in Sources */,
 				092FCC3928585DFD002BE83D /* DataPerson.swift in Sources */,
-				106CE6D02847EFE200E394BB /* Conditions.swift in Sources */,
+				106CE6D02847EFE200E394BB /* sheetView.swift in Sources */,
 				098E838D2859C3C70011AFC6 /* FavoriteCard.swift in Sources */,
 				098E83F3285A46E40011AFC6 /* CardDetails.swift in Sources */,
 				098E83912859C3C70011AFC6 /* ImagePicker.swift in Sources */,

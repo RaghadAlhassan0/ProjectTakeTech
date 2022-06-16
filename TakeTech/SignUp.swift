@@ -8,11 +8,14 @@ import AuthenticationServices
 import SwiftUI
 
 
+
 struct SignUp: View {
     
     @State var email = ""
     @State var pass = ""
     @Environment(\.colorScheme) var colorScheme
+    
+    @State private var showingSheet = false
     
     var body: some View {
         
@@ -93,7 +96,7 @@ struct SignUp: View {
                                 .padding([.top, .leading, .trailing])
                             
                             
-                            HStack{
+                            HStack {
                                 Text("you agree to our")
                                 
                                     .multilineTextAlignment(.center)
@@ -101,13 +104,23 @@ struct SignUp: View {
                                     .font(.footnote)
                                     .multilineTextAlignment(.center)
                                 
-                                
-                                NavigationLink {Conditions()} label:{
-                                    Text( "Terms and Conditions")
-                                        .foregroundColor(Color("MyYellow"))
-                                        .font(.footnote)
+                                Button {
+                                    showingSheet.toggle()
+                                } label: {
+                                    Text("Terms and Conditions")
                                         .underline()
+                                        .font(.footnote)
+                                        .foregroundColor(Color("MyYellow"))
                                 }
+
+                                    .sheet(isPresented: $showingSheet){
+                                
+                                    sheetView()
+                                            .foregroundColor(.white)
+                                    }
+ 
+                                
+                                
                             }
                         }
                     }
@@ -122,6 +135,7 @@ struct SignUp: View {
         
     }
 }
+
 
 
 
@@ -225,6 +239,15 @@ func handle(_ authResult: ( Result<ASAuthorization, Error>)){
         print(error)
     }
 }
+
+
+
+
+
+
+
+
+
 struct SignUp_Previews: PreviewProvider {
     static var previews: some View {
         SignUp()
