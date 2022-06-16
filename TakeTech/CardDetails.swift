@@ -39,7 +39,7 @@ struct CardDetails: View {
                         HStack{
                         
                         
-                        Image("avatar")
+                            Image(Card.ImageURL)
                             .resizable()
                             .frame(width: 44, height: 44, alignment: .trailing)
                             .clipShape(Circle())
@@ -118,33 +118,37 @@ struct CardDetails: View {
                 
                 
                     
-                    Text("""
-ffff
-ffff
-ffff
-fff
-""")
-                Button {
-                    
-                } label: {
-                    Text("Book")
-                        .foregroundColor(.black)
-                        .frame(width: 312.02, height: 40, alignment: .center)
-                        .background(.foreground)
-                        .cornerRadius(6)
-                        .foregroundColor(.init("blue"))
-                        .padding(.bottom)
-                }}
-//                .frame(width: .infinity, height: 680, alignment: .center)
+                    Text(Card.description)
+                        .font(.custom("text", size: 16))
+                        .padding(.horizontal, 32)
+             }
+                .frame(width: .infinity, height: 680, alignment: .top)
 //                .padding(.horizontal, 16.0)
+                
+                VStack{
+                    Spacer()
+                    Button {
+                        
+                    } label: {
+                        Text("Book")
+                            .foregroundColor(.black)
+                            .frame(width: 312.02, height: 40, alignment: .center)
+                            .background(.foreground)
+                            .cornerRadius(6)
+                            .foregroundColor(.init("blue"))
+                            .padding(.bottom)
+                    }
+                }.frame(width: .infinity, height: .infinity, alignment: .center)
                 
             }
             
             
             .navigationTitle("About me")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(false)
             
         }
+        
     }
 }
 
