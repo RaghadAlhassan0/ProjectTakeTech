@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct EmptyState: View {
+    
+    @EnvironmentObject var viewModel : pageFavo
+    
     var body: some View {
         
         Text("Hello, World!")
-        ForEach(pageFavo().items, id: \.self) { sample in
-            ConsultationCell(card: sample)
+        ForEach(viewModel.items, id: \.self) { sample in
+          //  ConsultationCell(card: sample)
+            Text(sample.name)
+         //   print(sample.name)
         }
         
         

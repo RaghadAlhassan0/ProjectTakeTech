@@ -85,6 +85,8 @@ struct ConsultationCell: View {
                                 viewModel.deleteItems(card)
                             }
                             
+                   
+                            print(viewModel.items)
                             
                         } label: {
                             Image(systemName: ("heart.fill"))
@@ -100,10 +102,14 @@ struct ConsultationCell: View {
                                 
                                 if (showFavourite == true){
                                     viewModel.add(card)
+                                    
+                                    
                                 }
                                 else{
                                     viewModel.deleteItems(card)
                                 }
+                                
+                                print(viewModel.items)
                                 
                             } label: {
                                 Image(systemName: ("suit.heart"))
