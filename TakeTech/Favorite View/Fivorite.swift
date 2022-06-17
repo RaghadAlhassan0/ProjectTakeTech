@@ -40,7 +40,7 @@ struct Fivorite: View {
                 }
               }
                 }
-                .onDelete(perform:myFavorite.deleteItems)
+             //   .onDelete(perform:myFavorite.deleteItems)
               }
               .listStyle(PlainListStyle())
           Button{

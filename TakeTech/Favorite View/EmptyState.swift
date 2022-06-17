@@ -11,6 +11,11 @@ struct EmptyState: View {
     var body: some View {
         
         Text("Hello, World!")
+        ForEach(pageFavo().items, id: \.self) { sample in
+            ConsultationCell(card: sample)
+        }
+        
+        
     }
 }
 

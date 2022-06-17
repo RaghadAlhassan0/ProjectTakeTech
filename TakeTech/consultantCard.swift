@@ -77,6 +77,15 @@ struct ConsultationCell: View {
                             //                viewModel.add(Card)
                             showFavourite.toggle()
                             //                favouriteArr
+                            
+                            if (showFavourite == true){
+                                viewModel.add(card)
+                            }
+                            else{
+                                viewModel.deleteItems(card)
+                            }
+                            
+                            
                         } label: {
                             Image(systemName: ("heart.fill"))
                                 .resizable().frame(width: 20, height: 18)
@@ -88,6 +97,14 @@ struct ConsultationCell: View {
                         VStack.init( alignment: .trailing, spacing: 20){
                             Button {
                                 showFavourite.toggle()
+                                
+                                if (showFavourite == true){
+                                    viewModel.add(card)
+                                }
+                                else{
+                                    viewModel.deleteItems(card)
+                                }
+                                
                             } label: {
                                 Image(systemName: ("suit.heart"))
                                     .resizable().frame(width: 20, height: 18)

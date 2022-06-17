@@ -93,7 +93,7 @@ struct userProfileView: View {
                                     .foregroundColor(.gray)
                                 
                                     .padding(.trailing, 2.0)
-                                NavigationLink(destination: EmptyView()) {
+                                NavigationLink(destination: EmptyState()) {
                                     Text("My Favorite")
 //                                        .lineLimit(1)
                                         .font(.system(size: 14))

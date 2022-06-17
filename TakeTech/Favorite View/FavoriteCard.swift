@@ -14,9 +14,14 @@ final class pageFavo:ObservableObject{
            items.append(favo)
        }
     
-    
-      func deleteItems(at offests : IndexSet){
-            items.remove(atOffsets: offests)
+
+    func deleteItems(_ favo: Card){
+            
+          let index = items.firstIndex(of: favo) ?? -1;
+        if(index > -1) {
+            items.remove(at: index);
+        }
+            
         }
 }
 
