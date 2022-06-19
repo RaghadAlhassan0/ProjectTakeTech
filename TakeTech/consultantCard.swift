@@ -36,7 +36,7 @@ struct ConsultationCell: View {
                 ZStack{
                     //
                     VideoPlayer(player: AVPlayer(url: URL(string: card.imageVideoName)!))
-                        .frame(width: .infinity, height: 200)
+                        .frame(width: .infinity, height: 225)
                 }
                 HStack{
                     Image(card.ImageURL)
