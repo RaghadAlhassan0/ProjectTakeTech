@@ -30,10 +30,10 @@ struct LogIn: View {
                     Image("Logo")
                         .resizable()
                         .frame(width: 100, height: 100, alignment: .center)
-//                        .padding(.all, 40.0)
+                        .padding(.top, -25.0)
+                        .padding(.bottom, 60.0)
                     
-                    
-                    
+                
                     
                     mailView(email: email)
                     
