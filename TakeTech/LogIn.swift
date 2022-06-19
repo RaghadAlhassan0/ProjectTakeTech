@@ -33,7 +33,7 @@ struct LogIn: View {
                         .padding(.top, -25.0)
                         .padding(.bottom, 60.0)
                     
-                
+                        .padding()
                     
                     mailView(email: email)
                     
