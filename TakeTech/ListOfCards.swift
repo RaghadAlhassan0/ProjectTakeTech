@@ -87,7 +87,7 @@ struct ListOfCards: View {
            
         }}
             
-            .navigationTitle("Consultation")
+            .navigationTitle("Consultations")
             .navigationBarTitleDisplayMode(.inline)
         }
         .navigationBarBackButtonHidden(true)

@@ -1,0 +1,92 @@
+/* 
+  Localizable.strings
+  TakeTech
+
+  Created by Arwa Alzahrani on 20/11/1443 AH.
+  
+*/
+
+
+"Search..." = "ابحث ..." ;
+"Consultations" = "الاستشارات";
+"I need a consultant" = "أحتاج استشارة" ;
+"I'm a consultant" = "أنا مستشار" ;
+"Sign Up" = "التسجيل" ;
+"OR" = "باركود" ;
+"Already have an account? " = "هل لديك حساب بالفعل؟" ;
+"Login" = "الدخول" ;
+"By clicking Sign up or Sign up with Apple" = "" ;
+"you agree to our" = "لقد وافقت على" ;
+"Terms and Conditions" = "الشروط والأحكام" ;
+"Password" = "كلمة المرور" ;
+"Email" = "البريد الإلكتروني" ;
+"saved apple user" = "حفظ حساب أبل" ;
+"missing some fields" = "بعض الملفات مفقودة" ;
+"Don’t have an account?" = "ليس لديك حساب ؟" ;
+"The first party retains property rights. In the event of a violation or breach by the second party,the second party obligated to compensate the first party for psychological and material damage. The parties are also obligated to:" = "" ;
+"- I, the consultant allow the application to take 20% of the total fees paid by the user." = "" ;
+"- I, the user has the right to be given a notice in approximate 24 hours, before the session start, for the consultant to cancel the session based on the issue provided. If the consultant failed to show on time, the user will be credit the full amount." = "" ;
+"- If the consultant cancled the session, the user will be credited the full amount." = "" ;
+"- If the user cancelled before the beginning of the session in 24 hours, a refund will be credited. If the user cancelled within 24 hours before the beginning of the session, NO refund will be credited." = "" ;
+"Consultations" = "الاستشارات" ;
+"SR" = "رس" ;
+"Minutes" = "دقيقة" ;
+"Book" = "حجز" ;
+"About me" = "نبذه عني" ;
+"Khalid Almonyr" = "خالد المنير" ;
+"Poor" = "ضعيف" ;
+"Okay" = "لا بأس" ;
+"Good" = "جيد " ;
+"Very Good" = "ممتاز" ;
+"Excellent" = "رائع" ;
+"Submit" = "إرسال" ;
+"Upcoming" = "القادمة" ;
+"Past" = "الماضية" ;
+"Sessions" = "الجلسات" ;
+"Session Confirmed " = "الجلسة مؤكدة" ;
+"A confirmation mail will be sent to your email Please refer to our no-show/cancellation policy for our sessions" = "" ;
+"Mohammed" = "محمد" ;
+"Name" = "الاسم" ;
+"Date" = "التاريخ" ;
+"20th May 2022" = "٢٠ مايو ٢٠٢٢" ;
+"Time" = "الوقت" ;
+"6:20 PM" = "٦:٢٠ مساءاً" ;
+"Done" = "تم" ;
+"Your request was successfully                                                                submitted! " = "" ;
+"Our admins will send you an email once they review your request!                                                                Please be noted that your request may take up to 2 weeks maximum until it is fully completed" = "" ;
+"My Favorite" = "مفضلتي" ;
+"Log Out" = "تسجيل الخروج" ;
+"Profile" = "الملف الشخصي" ;
+"Edit" = "تعديل" ;
+"Save" = "حفظ" ;
+"Edit Profile" = "تعديل الملف الشخصي" ;
+"Card number" = "رقم البطاقة" ;
+"Cardholder’s name" = "اسم حامل البطاقة" ;
+"    Name" = "الاسم   " ;
+"Expiry date" = "تاريخ الانتهاء" ;
+"    MM / YY" = "    MM / YY" ;
+"CVV" = "CVV" ;
+"    3 digits" = "    3 digits" ;
+"Total amount" = "المجموع" ;
+"SR  " = "رس   " ;
+"Pay" = "دفع" ;
+"Apple pay" = "الدفع عن طريق أبل" ;
+"Checkout" = "الدفع" ;
+[ "Information Technology" ,"Computer Science" ,"Information System", "Internet Of Things", "Artificial Intelligence", "Cyber Security", "Data Analysis", "Software Engineering"] = [ "Information Technology" ,"Computer Science" ,"Information System", "Internet Of Things", "Artificial Intelligence", "Cyber Security", "Data Analysis", "Software Engineering"] ;
+"Years of Experiance*" = "سنوات الخبرة*" ;
+"Major / Proficiency*" = "التخصص / المهارة*" ;
+"* If you couldn't find your major please provide it at the description" = "" ;
+"Describe yourself*" = "" ;
+"UPLOAD ANY DOCUMENTS THAT APPROVE YOUR PROVIDED INFORMATION*" = "ارفق أي ملفات تثبت صحة معلوماتك السابقة" ;
+"Import Files" = "جلب ملفات" ;
+"Error selecting file: " = "  تعذر رفع الملف المحدد" ;
+"Error reading file " = "تعذر قراءة الملف" ;
+"Create" = "إنشاء" ;
+"Select date: " = "اختر التاريخ" ;
+"Select time: " = "اختر الوقت" ;
+"to" = "إلى" ;
+"Add" = "إضافة" ;
+"My Schedule" = "جدولي" ;
+" Consultations" = "الاستشارات" ;
+" /  Minutes" = "دقائق /" ;
+"Consultants" = "الاستشارات" ;

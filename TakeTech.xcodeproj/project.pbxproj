@@ -29,6 +29,7 @@
 		098E83922859C3C70011AFC6 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098E838B2859C3C70011AFC6 /* EditProfileView.swift */; };
 		098E83932859C3C70011AFC6 /* profileImageMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098E838C2859C3C70011AFC6 /* profileImageMod.swift */; };
 		098E83F3285A46E40011AFC6 /* CardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098E83F2285A46E40011AFC6 /* CardDetails.swift */; };
+		09931B95285F46EB0040A282 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09931B97285F46EB0040A282 /* Localizable.strings */; };
 		106CE6CA2847EF6D00E394BB /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CE6C92847EF6D00E394BB /* FirstPage.swift */; };
 		106CE6CC2847EF9900E394BB /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CE6CB2847EF9900E394BB /* LogIn.swift */; };
 		106CE6CE2847EFBF00E394BB /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CE6CD2847EFBF00E394BB /* SignUp.swift */; };
@@ -70,6 +71,8 @@
 		098E838B2859C3C70011AFC6 /* EditProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		098E838C2859C3C70011AFC6 /* profileImageMod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileImageMod.swift; sourceTree = "<group>"; };
 		098E83F2285A46E40011AFC6 /* CardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetails.swift; sourceTree = "<group>"; };
+		09931B96285F46EB0040A282 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		09931B98285F47170040A282 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		106CE6C92847EF6D00E394BB /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
 		106CE6CB2847EF9900E394BB /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		106CE6CD2847EFBF00E394BB /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
@@ -137,10 +140,11 @@
 				01D7D972285B2B4500F262CA /* paymentView.swift */,
 				01D7D974285B2BBD00F262CA /* importFile.swift */,
 				01D7D96A285B2A8900F262CA /* scheduleView.swift */,
-				10C56F1B2855E58100A55DD8 /* GoogleService-Info.plist */,
-				091FA2F52845D7D70035F3F4 /* Assets.xcassets */,
 				098E83852859C3C70011AFC6 /* Favorite View */,
 				8828DE742857261B00325CDF /* Model */,
+				09931B97285F46EB0040A282 /* Localizable.strings */,
+				10C56F1B2855E58100A55DD8 /* GoogleService-Info.plist */,
+				091FA2F52845D7D70035F3F4 /* Assets.xcassets */,
 				091FA2F72845D7D70035F3F4 /* Preview Content */,
 			);
 			path = TakeTech;
@@ -236,6 +240,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 091FA2E52845D7D70035F3F4;
 			packageReferences = (
@@ -256,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				091FA2F92845D7D70035F3F4 /* Preview Assets.xcassets in Resources */,
+				09931B95285F46EB0040A282 /* Localizable.strings in Resources */,
 				091FA2F62845D7D70035F3F4 /* Assets.xcassets in Resources */,
 				10C56F1C2855E58100A55DD8 /* GoogleService-Info.plist in Resources */,
 			);
@@ -303,6 +309,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		09931B97285F46EB0040A282 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09931B96285F46EB0040A282 /* ar */,
+				09931B98285F47170040A282 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		091FA2FA2845D7D70035F3F4 /* Debug */ = {
