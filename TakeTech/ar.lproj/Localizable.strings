@@ -44,7 +44,7 @@
 "Past" = "الماضية" ;
 "Sessions" = "الجلسات" ;
 "Session Confirmed " = "الجلسة مؤكدة" ;
-"A confirmation mail will be sent to your email Please refer to our no-show/cancellation policy for our sessions" = "" ;
+"A confirmation mail will be sent to your email Please refer to our no-show/cancellation policy for our sessions" = "سيصلك ايميل .." ;
 "Mohammed" = "محمد" ;
 "Name" = "الاسم" ;
 "Date" = "التاريخ" ;
@@ -90,3 +90,16 @@
 " Consultations" = "الاستشارات" ;
 " /  Minutes" = "دقائق /" ;
 "Consultants" = "الاستشارات" ;
+"Informaton technology" = "تقنية معلومات" ;
+"UI/UX Designer" = " مصمم UI/UX" ;
+"Computer science" = "علوم الحاسب" ;
+"Cyber security" = "الأمن السيبراني" ;
+"IT" ="IT" ;
+"Enter" = "دخول" ;
+"Cancel" = "الغاء" ;
+"Please be noticed that the ENTER button will be avaliable 5 minutes before the session begins and will redirect you to the zoom call immediately " = "" ;
+"Sessions" = "الجلسات" ;
+"My schedule" = "جدولي" ;
+"Before I spend my money and time on cybersecurity certifications, I want to find one that will give me a competitive advantage in my career    " = "" ;
+"Next" = "التالي" ;
+
