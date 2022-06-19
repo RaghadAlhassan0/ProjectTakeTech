@@ -162,6 +162,8 @@ struct LogIn: View {
                     SecureField("***********", text: self.$pass)
                     
                     Image(systemName: "eye.slash.fill")
+                        .resizable()
+                        .frame(width:17, height: 12)
                         .foregroundColor(.gray)
                     
                 }
@@ -196,6 +198,8 @@ struct LogIn: View {
                 HStack(spacing: 15){
                     
                     Image(systemName: "envelope.fill")
+                        .resizable()
+                        .frame(width:17, height: 13)
                         .foregroundColor(.gray)
                     
                     TextField("you@example.com", text: self.$email)

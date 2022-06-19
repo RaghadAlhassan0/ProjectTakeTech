@@ -66,6 +66,9 @@ struct userProfileView: View {
                             Divider()
                             HStack{
                                 Image(systemName:"envelope.fill")
+                                    .resizable()
+                                    .frame(width: 16, height: 13)
+                                
                                     .frame(width: 15, height: 25)
                                 
                                     .foregroundColor(.gray)
@@ -82,29 +85,29 @@ struct userProfileView: View {
                                     .padding(.trailing, 16.0)
                                 Text(password)
                                     .font(.system(size: 14))
-                                    
+                                
                             }
                             Divider()
                             HStack{
                                 
                                 Image(systemName:"heart.fill")
                                     .resizable()
-                                    .frame(width: 17, height: 17)
+                                    .frame(width: 16, height: 16)
                                     .foregroundColor(.gray)
                                 
                                     .padding(.trailing, 2.0)
                                 NavigationLink(destination: EmptyState()) {
                                     Text("My Favorite")
-//                                        .lineLimit(1)
+                                    //                                        .lineLimit(1)
                                         .font(.system(size: 14))
                                         .foregroundColor(Color.white)
                                         .padding()
                                     Spacer()
                                     Image(systemName:"chevron.forward")
-                                  
-//                                        .padding(.leading, 190.0)
-//                                        .padding(.trailing, 8.0)
-//
+                                    
+                                    //                                        .padding(.leading, 190.0)
+                                    //                                        .padding(.trailing, 8.0)
+                                    //
                                         .foregroundColor(.white)
                                 }.padding(.horizontal,0)
                                 

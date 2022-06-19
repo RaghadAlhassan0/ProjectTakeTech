@@ -94,6 +94,9 @@ struct EditProfileView: View {
                         Divider()
                         HStack{
                             Image(systemName:"envelope.fill")
+                                .resizable()
+                                .frame(width: 16, height: 13)
+                            
                                 .frame(width: 15, height: 25)
                             
                                 .foregroundColor(.gray)

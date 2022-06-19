@@ -20,28 +20,30 @@ struct SessionView: View {
                 
                 
                 VStack(alignment: .center){
-                    
                     //App Bar :
                     HStack{
-                        
+                    
                         Button(action: {
                             withAnimation { isUpcomming = true }
-                            
+                        
                         }) {
                             
                             VStack{
                                 
-                                
+                         
                                 Text("Upcoming")
                                     .foregroundColor(self.isUpcomming ? .white : Color.white.opacity(0.7))
                                 
+                                    .frame(width: nil)
                                 
                                 Capsule()
                                     .fill(self.isUpcomming ? Color.white : Color.clear)
-                                    .frame(height:4)
+                                    .frame(width: 189, height:2)
+                                
                                 
                             }
-                        }  .padding(.horizontal, 50.0)
+                        }
+                        //                          .padding(.horizontal, 50.0)
                         
                         Button(action: {
                             withAnimation { isUpcomming = false }
@@ -58,13 +60,13 @@ struct SessionView: View {
                                 
                                 Capsule()
                                     .fill(!self.isUpcomming ? Color.white : Color.clear)
-                                    .frame(height:4)
+                                    .frame(width: 189, height:2)
                                 
                             }
                             
                         }
                         
-                        .padding(.horizontal, 55.0)
+                        //                                                                .padding(.horizontal, 55.0)
                         
                     }
                     .padding(.top, 125.0)
@@ -80,7 +82,10 @@ struct SessionView: View {
             }            .edgesIgnoringSafeArea(.all)
             
                 .navigationTitle("Sessions")
+         
                 .navigationBarTitleDisplayMode(.inline)
+            
+            
         }
         
     }

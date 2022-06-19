@@ -28,7 +28,9 @@ struct SignUp: View {
                     Image("Logo")
                         .resizable()
                         .frame(width: 100, height: 100, alignment: .center)
-                    //                        .padding(.all, 40.0)
+                        .padding(.top, -25.0)
+                        .padding(.bottom, 60.0)
+                    
                     mailView(email: email)
                     passView(pass: pass)
                     VStack{
@@ -113,13 +115,13 @@ struct SignUp: View {
                                         .font(.footnote)
                                         .foregroundColor(Color("MyYellow"))
                                 }
-
-                                    .sheet(isPresented: $showingSheet){
                                 
+                                .sheet(isPresented: $showingSheet){
+                                    
                                     sheetView()
-                                            .foregroundColor(.white)
-                                    }
- 
+                                        .foregroundColor(.white)
+                                }
+                                
                                 
                                 
                             }
@@ -148,10 +150,14 @@ struct passView: View {
                 .frame( maxWidth: .infinity, alignment: .leading)
             HStack(spacing: 15){
                 Image(systemName: "lock.fill")
+                
                     .foregroundColor(.gray)
                 SecureField("***********", text: self.$pass)
                 Image(systemName: "eye.slash.fill")
+                    .resizable()
+                    .frame(width:17, height: 12)
                     .foregroundColor(.gray)
+                
             }
             .padding(.vertical, 8.0)
             Divider().background(Color.white.opacity(0.5))
@@ -171,6 +177,8 @@ struct mailView: View{
                 .frame( maxWidth: .infinity, alignment: .leading)
             HStack(spacing: 15){
                 Image(systemName: "envelope.fill")
+                    .resizable()
+                    .frame(width:17, height: 13)
                     .foregroundColor(.gray)
                 TextField("you@example.com", text: self.$email)
             }
