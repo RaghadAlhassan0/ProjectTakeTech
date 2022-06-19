@@ -27,7 +27,7 @@ struct ConsultationCell: View {
     
     //  --------------------
     var body: some View {
-     
+       
         // ForEach(cardmodel.samples, id: \.self){ cr in
         ZStack{
             Color.init("background").edgesIgnoringSafeArea(.all)
@@ -180,9 +180,11 @@ struct ConsultationCell: View {
                 }
             }
             
+        
+        
+    
             .background(Color("gray")).cornerRadius(6)
             .padding([.leading, .bottom, .trailing], 16.0)
-            //        .sheet(isPresented: $showCardDetails)
             .fullScreenCover(isPresented: $showCardDetails, content: {
                 CardDetails(Card: card)
                 
@@ -190,7 +192,7 @@ struct ConsultationCell: View {
             
         }
     }
-        // }
+  
     }
 
 struct ConsultationCell_Previews: PreviewProvider {
@@ -199,4 +201,3 @@ struct ConsultationCell_Previews: PreviewProvider {
             .preferredColorScheme(.dark)
     }
 }
-

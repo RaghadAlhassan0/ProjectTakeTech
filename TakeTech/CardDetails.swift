@@ -19,13 +19,14 @@ struct CardDetails: View {
     var Card : Card
     var body: some View {
         NavigationView{
-         
-            ZStack{
-                Color.init("background").edgesIgnoringSafeArea(.all)
+        VStack{
+        ZStack{
+            Color.init("background").edgesIgnoringSafeArea(.all)
             
+            VStack{
+                
                 VStack{
-                    VStack{
-                   
+                    
                     ZStack{
                         Image.init(Card.imageVideoName)
                             .resizable()
@@ -36,10 +37,10 @@ struct CardDetails: View {
                             .frame(width: 31, height: 30, alignment: .center)
                         
                     }
-                        HStack{
+                    HStack{
                         
                         
-                            Image(Card.ImageURL)
+                        Image(Card.ImageURL)
                             .resizable()
                             .frame(width: 44, height: 44, alignment: .trailing)
                             .clipShape(Circle())
@@ -108,15 +109,17 @@ struct CardDetails: View {
                     
                     .padding()
                     
-
-            
-                
+                    
+                    
+                    
                     
                 }.background(Color("gray")).cornerRadius(6)
                     .padding([.leading, .bottom, .trailing], 16.0)
                     .padding(.horizontal, 16.0)
                 
-                
+//
+//<<<<<<< HEAD
+//=======
                     
                     Text(Card.description)
                         .font(.custom("text", size: 16))
@@ -140,18 +143,42 @@ struct CardDetails: View {
                             .padding(.bottom)
                     }
                 }.frame(width: .infinity, height: .infinity, alignment: .center)
+//>>>>>>> macroChallange
                 
+                Text(Card.description)
+                    .font(.custom("text", size: 16))
+                    .padding(.horizontal, 32)
             }
-            
-            
-            .navigationTitle("About me")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarBackButtonHidden(false)
-            
+//            .frame(width: .infinity, height: 680, alignment: .top)
+
         }
+        .navigationTitle("About me")
+        .navigationBarTitleDisplayMode(.inline)
         
+        
+    
+                .toolbar() {
+                    ToolbarItem.init(placement: .navigationBarLeading, content: {
+                        
+                        NavigationLink(destination: ContentView()) {
+                            Image(systemName: ("chevron.left"))
+                                                .font(.system(size: 17))
+                                                .foregroundColor(Color("blue"))
+                                    }
+
+
+                    })
+                
+            
+                }
+        
+        }
     }
+
 }
+
+
+
 
 struct CardDetails_Previews: PreviewProvider {
     static var previews: some View {
@@ -159,3 +186,4 @@ struct CardDetails_Previews: PreviewProvider {
             .preferredColorScheme(.dark)
     }
 }
+
