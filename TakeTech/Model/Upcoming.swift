@@ -62,7 +62,9 @@ struct Upcoming: View {
                 
                 HStack{
                     Button(action:{
-                        
+                        UIApplication.shared.open(URL(string:"FaceTime://+966537564520")!)
+
+
                     }) {
                         
                         
