@@ -29,19 +29,19 @@ struct SessionView: View {
                         }) {
                             
                             VStack{
-                                
+                             
                          
                                 Text("Upcoming")
-                                    .foregroundColor(self.isUpcomming ? .white : Color.white.opacity(0.7))
+                                    .foregroundColor(self.isUpcomming ? .primary : Color.primary.opacity(0.7))
                                 
                                     .frame(width: nil)
                                 
                                 Capsule()
-                                    .fill(self.isUpcomming ? Color.white : Color.clear)
+                                    .fill(self.isUpcomming ? Color.primary : Color.clear)
                                     .frame(width: 189, height:2)
                                 
-                                
                             }
+
                         }
                         //                          .padding(.horizontal, 50.0)
                         
@@ -51,17 +51,17 @@ struct SessionView: View {
                         }) {
                             
                             
+                            
                             VStack{
                                 
-                                
                                 Text("Past")
-                                    .foregroundColor(!self.isUpcomming ? .white : Color.white.opacity(0.7))
+                                    .foregroundColor(!self.isUpcomming ? .primary : Color.primary.opacity(0.7))
                                 
                                 
                                 Capsule()
-                                    .fill(!self.isUpcomming ? Color.white : Color.clear)
+                                    .fill(!self.isUpcomming ? Color.primary : Color.clear)
                                     .frame(width: 189, height:2)
-                                
+                            
                             }
                             
                         }
@@ -94,6 +94,6 @@ struct SessionView: View {
 struct SessionView2_Previews: PreviewProvider {
     static var previews: some View {
         SessionView()
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
     }
 }

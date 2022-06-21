@@ -46,8 +46,7 @@ struct TabBar: View {
             
         }
         
-        .accentColor(.white)
-//        .frame(height:820)
+        .accentColor(.primary)
         
     }
     
