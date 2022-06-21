@@ -25,11 +25,21 @@
 "Don’t have an account?" = "ليس لديك حساب ؟" ;
 "The first party retains property rights. In the event of a violation or breach by the second party,the second party obligated to compensate the first party for psychological and material damage. The parties are also obligated to:" = "يجب على الطرف الثاني (المستشار و المستخدم) الالتزام بالشروط المقدمه من قبل الطرف الأول الأساسي (مالك التطبيق ) مع إعطاء الطرف الأول كامل الحقوق الملكية. في حال قيام الطرف الثاني بالإخلال بأحد شروط الملكية، إلزام الطرف الثاني بتعويض الطرف الأول بجميع الخسائر النفسية و المادية.
 بشكل عام، يتوجب على كلا الطرفين (المستشار و المستخدم):" ;
-"- I, the consultant allow the application to take 20% of the total fees paid by the user." = "" ;
-"- I, the user has the right to be given a notice in approximate 24 hours, before the session start, for the consultant to cancel the session based on the issue provided. If the consultant failed to show on time, the user will be credit the full amount." = "" ;
-"- If the consultant cancled the session, the user will be credited the full amount." = "" ;
-"- If the user cancelled before the beginning of the session in 24 hours, a refund will be credited. If the user cancelled within 24 hours before the beginning of the session, NO refund will be credited." = "" ;
+
+"- I, the consultant allow the application to take 20% of the total fees paid by the user." = "أنا، الخبير (المستشار التقني)، أسمح للتطبيق بأخذ حصه مقدارها ٢٠٪ من مجموع المبلغ المدفوع من قبل المستخدم" ;
+
+
+"- I, the user has the right to be given a notice in approximate 24 hours, before the session start, for the consultant to cancel the session based on the issue provided. If the consultant failed to show on time, the user will be credit the full amount." = "أنا، المستخدم، في حال أراد المستشار إلغاء الجلسه بحسب طبيعة المشكلة المطروحة من قبلي، لدي الاحقيه الكامله بإعطائي تنبيه خلال ٢٤ ساعه من قبل أن تبدأ جلسة الإستشارة
+إذا تغيب المستشار عن إعطاء الجلسة أو قام بإلغاءها، المستخدم له الأحقية لاسترداد مبلغ الجلسة كاملً" ;
+
+
+"- If the consultant cancled the session, the user will be credited the full amount." = "في حالة إذا تم إلغاء الجلسة من قبل المستخدم قبل بدايتها بـ ٢٤ ساعه، فله الأحقية باسترداد المبلغ كاملًا" ;
+
+
+"- If the user cancelled before the beginning of the session in 24 hours, a refund will be credited. If the user cancelled within 24 hours before the beginning of the session, NO refund will be credited." = "أما في حال قيام المستخدم بإلغاء الجلسة خلال ٢٤ ساعه أو قبل بداية الجلسة ببضع ساعات، المبلغ لا يمكن إسترجاعه" ;
+
 "Consultations" = "الاستشارات" ;
+
 "SR" = "رس" ;
 "Minutes" = "دقيقة" ;
 "Book" = "حجز" ;
