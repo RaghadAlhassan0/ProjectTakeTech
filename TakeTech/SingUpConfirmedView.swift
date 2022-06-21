@@ -50,13 +50,13 @@ struct SingUpConfirmedView: View {
                 .padding()
             }
         }
-            
-        }
+        
     }
-    
-    struct confirmView_Previews: PreviewProvider {
-        static var previews: some View {
-            SingUpConfirmedView()
-                .preferredColorScheme(.dark)
-        }
+}
+
+struct confirmView_Previews: PreviewProvider {
+    static var previews: some View {
+        SingUpConfirmedView()
+            .preferredColorScheme(.dark)
     }
+}

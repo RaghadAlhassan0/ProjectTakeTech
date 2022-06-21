@@ -7,15 +7,15 @@
 import Foundation
 
 final class pageFavo:ObservableObject{
-    @Published var items :[Card]=[]
+    @Published var items :[User]=[]
     
-    func add(_ favo:Card){
+    func add(_ favo:User){
         
            items.append(favo)
        }
     
 
-    func deleteItems(_ favo: Card){
+    func deleteItems(_ favo: User){
             
           let index = items.firstIndex(of: favo) ?? -1;
         if(index > -1) {

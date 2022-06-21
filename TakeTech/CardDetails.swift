@@ -16,7 +16,7 @@ struct CardDetails: View {
     @State var favouriteArr = []
     
     
-    var Card : Card
+    var Card : User
     var body: some View {
         NavigationView{
         VStack{
@@ -182,7 +182,7 @@ struct CardDetails: View {
 
 struct CardDetails_Previews: PreviewProvider {
     static var previews: some View {
-        CardDetails(Card: Card(id: 0, ImageURL: "man1",imageVideoName: "https://cdn-tube.savefrom.to/download/417bc7ce79a27ef5d4fc65fe157da7f0/download/www.KeepVid.to--Video-CV-Sample-Video-Resume-of-Full-Stack-Developer-HireFox-www-youtube-com-720p-0bad55c0b6aae4384bcf229d4e59be19-720p.mp4", name: "Henry J", rating: 5, noOFconsultations: 0, description: "", major: "", price: 0, minutes: 0, faviorte2: "tessst"))
+        CardDetails(Card: User(id: "0", ImageURL: "man1",imageVideoName: "https://cdn-tube.savefrom.to/download/417bc7ce79a27ef5d4fc65fe157da7f0/download/www.KeepVid.to--Video-CV-Sample-Video-Resume-of-Full-Stack-Developer-HireFox-www-youtube-com-720p-0bad55c0b6aae4384bcf229d4e59be19-720p.mp4", name: "Henry J", rating: 5, noOFconsultations: 0, description: "", major: "", price: 0, minutes: 0, faviorte: true))
             .preferredColorScheme(.dark)
     }
 }

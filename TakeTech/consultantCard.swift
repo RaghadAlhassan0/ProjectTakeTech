@@ -13,7 +13,7 @@ import SwiftUI
 struct ConsultationCell: View {
     //  let appetizer : Appetizer
     @EnvironmentObject var viewModel : pageFavo
-    let card : Card
+    let card : User
     @State var items = []
     @State var showFavourite : Bool = false
     @State var showFavourite2 : Bool = false

@@ -14,7 +14,7 @@ struct ListOfCards: View {
    @State var searchtext = ""
     @State var isSearching = false
 
-    let majors: [Card] = cardmodel.samples
+    let majors: [User] = cardmodel.samples
 
     var body: some View {
         NavigationView{
