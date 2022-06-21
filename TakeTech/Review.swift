@@ -140,7 +140,7 @@ struct Review: View {
 struct FeedbackView_Previews: PreviewProvider {
     static var previews: some View {
         Review()
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
     }
 }
 

@@ -93,7 +93,7 @@ struct SignUp: View {
                             Text("By clicking Sign up or Sign up with Apple")
                             
                                 .multilineTextAlignment(.center)
-                                .foregroundColor(.white)
+                                .foregroundColor(.primary)
                                 .font(.footnote)
                                 .multilineTextAlignment(.center)
                                 .padding([.top, .leading, .trailing])
@@ -103,7 +103,7 @@ struct SignUp: View {
                                 Text("you agree to our")
                                 
                                     .multilineTextAlignment(.center)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.primary)
                                     .font(.footnote)
                                     .multilineTextAlignment(.center)
                                 
@@ -260,6 +260,6 @@ func handle(_ authResult: ( Result<ASAuthorization, Error>)){
 struct SignUp_Previews: PreviewProvider {
     static var previews: some View {
         SignUp()
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
     }
 }

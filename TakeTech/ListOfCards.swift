@@ -101,6 +101,6 @@ struct ListOfCards: View {
 struct searchBarview_Previews: PreviewProvider {
     static var previews: some View {
         ListOfCards()
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
     }
 }

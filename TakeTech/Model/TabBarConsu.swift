@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct TabBarConsu: View {
+    
+    init(){
+        UITabBar.appearance().backgroundColor =  UIColor(.init("gray"))
+    }
+
     var body: some View {
         
         TabView {
@@ -35,7 +40,7 @@ struct TabBarConsu: View {
             
         }
         
-        .accentColor(.white)
+        .accentColor(.primary)
     }
     
 }
@@ -44,6 +49,6 @@ struct TabBarConsu: View {
 struct TabBarConsu_Previews: PreviewProvider {
     static var previews: some View {
         TabBarConsu()
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
     }
 }

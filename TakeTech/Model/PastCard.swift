@@ -61,23 +61,40 @@ struct PastCard: View {
                 
                 
                 HStack{
-                    Button(action:{
-                        
-                    })  {
-                        
-                        
+                    NavigationLink(destination: scheduleView()) {
                         
                         Text("Book")
-                            .foregroundColor(.black)
-                            .fontWeight(.medium)
-                            .frame(width: 292, height: 32, alignment: .center)
-                            .font(.system(size: 15))
-                            .background(.foreground)
-                            .cornerRadius(6)
-                            .foregroundColor(.init("blue"))
                         
-                    }.padding(.top, 16.0)
-                }
+                    }
+                    
+                    .foregroundColor(.black)
+                       
+                        .frame(width: 292, height: 32, alignment: .center)
+                        .font(.system(size: 15))
+                        .background(.foreground)
+                        .cornerRadius(6)
+                        .foregroundColor(.init("blue"))
+                    
+                    
+                    
+                    
+//                    Button(action:{
+//
+//                    })  {
+//
+//
+//
+//                        Text("Book")
+//                            .foregroundColor(.black)
+//                            .fontWeight(.medium)
+//                            .frame(width: 292, height: 32, alignment: .center)
+//                            .font(.system(size: 15))
+//                            .background(.foreground)
+//                            .cornerRadius(6)
+//                            .foregroundColor(.init("blue"))
+//
+//                    }.padding(.top, 16.0)
+                }.padding(.top, 16.0)
                 
             }
         }

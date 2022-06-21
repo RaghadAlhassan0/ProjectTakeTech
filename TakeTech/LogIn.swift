@@ -300,7 +300,7 @@ struct LogIn_Previews: PreviewProvider {
     static var previews: some View {
         LogIn()
         
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
         
     }
 }
