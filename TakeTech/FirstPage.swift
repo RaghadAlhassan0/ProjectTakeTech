@@ -71,7 +71,7 @@ struct FirstPage_Previews: PreviewProvider {
     static var previews: some View {
         FirstPage()
         
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
         
     }
 }

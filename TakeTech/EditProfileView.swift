@@ -112,6 +112,6 @@ struct EditProfileView: View {
 struct EditProfile_Previews: PreviewProvider {
   static var previews: some View {
     EditProfileView()
-      .preferredColorScheme(.dark)
+      .preferredColorScheme(.light)
   }
 }
