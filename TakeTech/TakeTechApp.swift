@@ -7,15 +7,29 @@
 
 import SwiftUI
 import Firebase
+import FirebaseFirestore
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        return true
+    }
+}
 
 @main
 struct TakeTechApp: App {
-    @StateObject var viewModel = pageFavo()
-    init(){FirebaseApp.configure()}
+    @StateObject var firebaseManager = FireBaseManager()
+    @UIApplicationDelegateAdaptor var appDelegate: AppDelegate
+    init(){
+        UITabBar.appearance().backgroundColor =  UIColor(.init("gray"))
+        
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(viewModel)
+            Group{
+               TabBar()
+            }.environmentObject(firebaseManager)
         }
     }
 }

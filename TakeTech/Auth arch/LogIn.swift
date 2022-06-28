@@ -8,24 +8,18 @@
 import AuthenticationServices
 import SwiftUI
 
-
-
 struct LogIn: View {
     
     @State var email = ""
     @State var pass = ""
-    
+    @EnvironmentObject var firebaseManager: FireBaseManager
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
-        
         NavigationView{
-            
-            
             ZStack{
                 Color.init("background").edgesIgnoringSafeArea(.all)
-                
                 VStack{
-                    
                     
                     Image("Logo")
                         .resizable()
@@ -33,13 +27,11 @@ struct LogIn: View {
                         .padding(.top, -25.0)
                         .padding(.bottom, 60.0)
                     
-                       
+                    
                     
                     mailView(email: email)
                     
                     passView(pass: pass)
-                    
-                    
                     
                     
                     // Forgot Password ...
@@ -101,7 +93,7 @@ struct LogIn: View {
                         }
                         
                         //signin with apple
-                       
+                        
                         SignInWithAppleButton(.signIn, onRequest: configure, onCompletion: handle)
                         
                             .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
@@ -116,15 +108,16 @@ struct LogIn: View {
                             Text("Don’t have an account?")
                                 .font(.footnote)
                             
-                            NavigationLink{
-                                SignUp()}label:{
-                            Text(" Sign Up")
-                                        .fontWeight(.medium)
-                                .font(.footnote)
-                            
-                                .foregroundColor(Color("MyYellow"))
-                                .underline()
-                                }
+                            Button{
+                                presentationMode.wrappedValue.dismiss()
+                            } label:{
+                                Text(" Sign Up")
+                                    .fontWeight(.medium)
+                                    .font(.footnote)
+                                
+                                    .foregroundColor(Color("MyYellow"))
+                                    .underline()
+                            }
                             
                         }
                         
@@ -245,51 +238,47 @@ struct LogIn: View {
     
     
     func configure(_ request: ASAuthorizationAppleIDRequest){
-
+        
         request.requestedScopes = [.fullName, .email]
         //        request.nonce = ""
-
+        
     }
     
     func handle(_ authResult: ( Result<ASAuthorization, Error>)){
-
+        
         switch authResult {
         case.success(let auth):
             print(auth)
-
+            
             switch auth.credential{
             case let appleIdCredentials as ASAuthorizationAppleIDCredential:
-
+                
                 if let appleUser = AppleUser(credentials: appleIdCredentials),
                    let appleUserDate = try? JSONEncoder().encode(appleUser)
                 {
                     UserDefaults.standard.setValue(appleUserDate, forKey: appleUser.userId)
-
+                    
                     print("saved apple user", appleUser)
-                } else{
+                } else {
                     print("missing some fields",appleIdCredentials.email, appleIdCredentials.fullName, appleIdCredentials.user)
-
                     guard
                         let appleUserData = UserDefaults.standard.data(forKey: appleIdCredentials.user),
                         let appleUser = try? JSONDecoder().decode(AppleUser.self, from: appleUserData)
-
+                            
                     else { return }
-
+                    
                     print(appleUser)
                 }
-
+                
             default:
                 print(auth.credential)
-
-
+                
             }
         case.failure(let error):
             print(error)
-
+            
         }
-
     }
-    
     
 }
 
@@ -299,7 +288,7 @@ struct LogIn: View {
 struct LogIn_Previews: PreviewProvider {
     static var previews: some View {
         LogIn()
-        
+            .environmentObject(FireBaseManager())
             .preferredColorScheme(.light)
         
     }

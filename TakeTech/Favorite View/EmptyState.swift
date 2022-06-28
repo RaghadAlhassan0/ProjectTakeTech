@@ -91,10 +91,10 @@ struct EmptyState: View {
 
             }   .background(Color("gray")).cornerRadius(6)
                 .padding([.leading, .bottom, .trailing], 16.0)
-                .fullScreenCover(isPresented: $showCardDetails, content: {
-                    CardDetails(Card: sample)
-                    
-                })
+//                .fullScreenCover(isPresented: $showCardDetails, content: {
+//                    CardDetails(consultant: sample)
+//                    
+//                })
          //   print(sample.name)
         }
     }

@@ -22,10 +22,12 @@ struct User :Hashable , Codable{
     var major : String
     var price : Int
     var minutes : Int
-    var faviorte : Bool?
+    var favoriteIds : [String] = []
     var isConsultant : Bool = false
+    var isAccountActive: Bool = true
     var phoneNumber : String = ""
     var documents : [String] = []
+    var email: String = ""
 }
 
 
@@ -37,8 +39,6 @@ struct cardmodel {
         User(id: UUID().uuidString, ImageURL: "test Image", imageVideoName: "https://cdn-tube.savefrom.to/download/417bc7ce79a27ef5d4fc65fe157da7f0/download/www.KeepVid.to--Video-CV-Sample-Video-Resume-of-Full-Stack-Developer-HireFox-www-youtube-com-720p-0bad55c0b6aae4384bcf229d4e59be19-720p.mp4", name: "Mohammed Ali", rating: 0, noOFconsultations: 0, description: "kkkkkkkkkkkkkkkkkkkkkkkkkkkk", major: "Computer science", price: 300, minutes: 30 ) ,
         User(id: UUID().uuidString, ImageURL: "test Image", imageVideoName: "https://cdn-tube.savefrom.to/download/417bc7ce79a27ef5d4fc65fe157da7f0/download/www.KeepVid.to--Video-CV-Sample-Video-Resume-of-Full-Stack-Developer-HireFox-www-youtube-com-720p-0bad55c0b6aae4384bcf229d4e59be19-720p.mp4", name: "Saad Alsalem", rating: 0, noOFconsultations: 0, description: "test", major: "Cyber security", price: 300, minutes: 30),
         User(id: UUID().uuidString, ImageURL: "test Image", imageVideoName: "https://cdn-tube.savefrom.to/download/417bc7ce79a27ef5d4fc65fe157da7f0/download/www.KeepVid.to--Video-CV-Sample-Video-Resume-of-Full-Stack-Developer-HireFox-www-youtube-com-720p-0bad55c0b6aae4384bcf229d4e59be19-720p.mp4", name: "Hamzza Adnan", rating: 0, noOFconsultations: 0, description: "test", major: "IT", price: 300, minutes: 30)]
-
- 
 }
 
 

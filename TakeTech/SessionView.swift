@@ -10,83 +10,66 @@ import SwiftUI
 struct SessionView: View {
     
     @State var isUpcomming: Bool = true
-    
+    @EnvironmentObject var firebaseManager: FireBaseManager
+    @State var isShowingRegistrationView: Bool = false
     var body: some View {
-        
         NavigationView{
-            
             ZStack{
                 Color.init("background")
-                
-                
-                VStack(alignment: .center){
-                    //App Bar :
-                    HStack{
-                    
-                        Button(action: {
-                            withAnimation { isUpcomming = true }
-                        
-                        }) {
-                            
-                            VStack{
-                             
-                         
-                                Text("Upcoming")
-                                    .foregroundColor(self.isUpcomming ? .primary : Color.primary.opacity(0.7))
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(alignment: .center){
+                        HStack{
+                            Button(action: {
+                                withAnimation { isUpcomming = true }
                                 
-                                    .frame(width: nil)
+                            }) {
                                 
-                                Capsule()
-                                    .fill(self.isUpcomming ? Color.primary : Color.clear)
-                                    .frame(width: 189, height:2)
-                                
+                                VStack{
+                                    Text("Upcoming")
+                                        .foregroundColor(self.isUpcomming ? .primary : Color.primary.opacity(0.7))
+                                        .frame(width: nil)
+                                    
+                                    Capsule()
+                                        .fill(self.isUpcomming ? Color.primary : Color.clear)
+                                        .frame(width: 189, height:2)
+                                }
                             }
-
-                        }
-                        //                          .padding(.horizontal, 50.0)
-                        
-                        Button(action: {
-                            withAnimation { isUpcomming = false }
+                            //                          .padding(.horizontal, 50.0)
                             
-                        }) {
-                            
-                            
-                            
-                            VStack{
-                                
-                                Text("Past")
-                                    .foregroundColor(!self.isUpcomming ? .primary : Color.primary.opacity(0.7))
-                                
-                                
-                                Capsule()
-                                    .fill(!self.isUpcomming ? Color.primary : Color.clear)
-                                    .frame(width: 189, height:2)
-                            
+                            Button(action: {
+                                withAnimation {
+                                    isUpcomming = false
+                                }
+                            }) {
+                                VStack{
+                                    
+                                    Text("Past")
+                                        .foregroundColor(!self.isUpcomming ? .primary : Color.primary.opacity(0.7))
+                                    
+                                    
+                                    Capsule()
+                                        .fill(!self.isUpcomming ? Color.primary : Color.clear)
+                                        .frame(width: 189, height:2)
+                                    
+                                }
                             }
-                            
+                        }.padding(.top, 125.0)
+                        
+                        ForEach(1...10, id:\.self){ num in
+                            Upcoming()
                         }
-                        
-                        //                                                                .padding(.horizontal, 55.0)
-                        
+                        //                        if isUpcomming {
+                        //                            Upcoming().padding()
+                        //                        } else {
+                        //                            PastCard().padding()
+                        //                        }
                     }
-                    .padding(.top, 125.0)
-                    
-                    if isUpcomming {
-                        Upcoming().padding()
-                    } else {
-                        PastCard().padding()
-                    }
-                    Spacer()
                 }
-                
-            }            .edgesIgnoringSafeArea(.all)
-            
+            }.ignoresSafeArea()
                 .navigationTitle("Sessions")
-         
                 .navigationBarTitleDisplayMode(.inline)
-            
-            
         }
+
         
     }
 }
@@ -94,6 +77,7 @@ struct SessionView: View {
 struct SessionView2_Previews: PreviewProvider {
     static var previews: some View {
         SessionView()
-            .preferredColorScheme(.light)
+            .environmentObject(FireBaseManager())
+            .preferredColorScheme(.dark)
     }
 }

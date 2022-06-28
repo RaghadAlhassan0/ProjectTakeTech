@@ -35,8 +35,7 @@
 		106CE6CA2847EF6D00E394BB /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CE6C92847EF6D00E394BB /* FirstPage.swift */; };
 		106CE6CC2847EF9900E394BB /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CE6CB2847EF9900E394BB /* LogIn.swift */; };
 		106CE6CE2847EFBF00E394BB /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CE6CD2847EFBF00E394BB /* SignUp.swift */; };
-		106CE6D02847EFE200E394BB /* sheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CE6CF2847EFE200E394BB /* sheetView.swift */; };
-		10C56F1C2855E58100A55DD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10C56F1B2855E58100A55DD8 /* GoogleService-Info.plist */; };
+		106CE6D02847EFE200E394BB /* ConsultantAgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CE6CF2847EFE200E394BB /* ConsultantAgreementView.swift */; };
 		10C56F1F2855E66400A55DD8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 10C56F1E2855E66400A55DD8 /* FirebaseAuth */; };
 		10C56F212855E66400A55DD8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 10C56F202855E66400A55DD8 /* FirebaseFirestore */; };
 		10C56F232855E66400A55DD8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 10C56F222855E66400A55DD8 /* FirebaseStorage */; };
@@ -47,6 +46,10 @@
 		8828DE7E285726D800325CDF /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8828DE7D285726D800325CDF /* Review.swift */; };
 		8828DE80285726F500325CDF /* SessionConfirmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8828DE7F285726F500325CDF /* SessionConfirmedView.swift */; };
 		8828DE822857273F00325CDF /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8828DE812857273F00325CDF /* SessionView.swift */; };
+		BA43844D28672B47002BD8A5 /* sessionBookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43844C28672B47002BD8A5 /* sessionBookingView.swift */; };
+		BA7F617E28630CA4001DBF66 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BA7F617D28630CA4001DBF66 /* SDWebImageSwiftUI */; };
+		BAC1E7682862355600B1DFFB /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = BAC1E7672862355600B1DFFB /* FirebaseMessaging */; };
+		BAC1E76A286244AC00B1DFFB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAC1E769286244AC00B1DFFB /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,9 +82,8 @@
 		106CE6C92847EF6D00E394BB /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
 		106CE6CB2847EF9900E394BB /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		106CE6CD2847EFBF00E394BB /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
-		106CE6CF2847EFE200E394BB /* sheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sheetView.swift; sourceTree = "<group>"; };
+		106CE6CF2847EFE200E394BB /* ConsultantAgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantAgreementView.swift; sourceTree = "<group>"; };
 		10C56F1A2851D41000A55DD8 /* TakeTech.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TakeTech.entitlements; sourceTree = "<group>"; };
-		10C56F1B2855E58100A55DD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8828DE752857265000325CDF /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		8828DE772857268600325CDF /* TabBarConsu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConsu.swift; sourceTree = "<group>"; };
 		8828DE792857269B00325CDF /* PastCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastCard.swift; sourceTree = "<group>"; };
@@ -89,6 +91,9 @@
 		8828DE7D285726D800325CDF /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		8828DE7F285726F500325CDF /* SessionConfirmedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionConfirmedView.swift; sourceTree = "<group>"; };
 		8828DE812857273F00325CDF /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		BA43844C28672B47002BD8A5 /* sessionBookingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sessionBookingView.swift; sourceTree = "<group>"; };
+		BA7F617B2862FE11001DBF66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BAC1E769286244AC00B1DFFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +101,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA7F617E28630CA4001DBF66 /* SDWebImageSwiftUI in Frameworks */,
 				10C56F1F2855E66400A55DD8 /* FirebaseAuth in Frameworks */,
 				10C56F212855E66400A55DD8 /* FirebaseFirestore in Frameworks */,
+				BAC1E7682862355600B1DFFB /* FirebaseMessaging in Frameworks */,
 				10C56F232855E66400A55DD8 /* FirebaseStorage in Frameworks */,
 				09626BEA286223EB00140CA0 /* FirebaseFirestoreSwift in Frameworks */,
 			);
@@ -126,18 +133,19 @@
 		091FA2F02845D7D70035F3F4 /* TakeTech */ = {
 			isa = PBXGroup;
 			children = (
+				BA7F617B2862FE11001DBF66 /* Info.plist */,
 				10C56F1A2851D41000A55DD8 /* TakeTech.entitlements */,
 				091FA2F12845D7D70035F3F4 /* TakeTechApp.swift */,
-				091FA2F32845D7D70035F3F4 /* ContentView.swift */,
-				092FCC3A285867A3002BE83D /* ListOfCards.swift */,
 				106CE6C92847EF6D00E394BB /* FirstPage.swift */,
-				106CE6CD2847EFBF00E394BB /* SignUp.swift */,
-				106CE6CB2847EF9900E394BB /* LogIn.swift */,
-				106CE6CF2847EFE200E394BB /* sheetView.swift */,
-				091FA3042845E3040035F3F4 /* consultantCard.swift */,
-				098E83F2285A46E40011AFC6 /* CardDetails.swift */,
+				8828DE752857265000325CDF /* TabBar.swift */,
+				091FA2F32845D7D70035F3F4 /* ContentView.swift */,
+				BA7F61B828645B49001DBF66 /* Auth arch */,
+				106CE6CF2847EFE200E394BB /* ConsultantAgreementView.swift */,
+				BA7F61B628645902001DBF66 /* UserHomeView arch */,
 				8828DE7D285726D800325CDF /* Review.swift */,
+				BA43844B286728A7002BD8A5 /* Session arch */,
 				8828DE812857273F00325CDF /* SessionView.swift */,
+				BA43844C28672B47002BD8A5 /* sessionBookingView.swift */,
 				8828DE7F285726F500325CDF /* SessionConfirmedView.swift */,
 				01D7D978285B2C7300F262CA /* SingUpConfirmedView.swift */,
 				098E83892859C3C70011AFC6 /* userProfileView.swift */,
@@ -145,11 +153,12 @@
 				01D7D972285B2B4500F262CA /* paymentView.swift */,
 				01D7D974285B2BBD00F262CA /* importFile.swift */,
 				01D7D96A285B2A8900F262CA /* scheduleView.swift */,
+				09626BE62862214800140CA0 /* FireBaseManager.swift */,
 				098E83852859C3C70011AFC6 /* Favorite View */,
 				8828DE742857261B00325CDF /* Model */,
 				09931B97285F46EB0040A282 /* Localizable.strings */,
-				10C56F1B2855E58100A55DD8 /* GoogleService-Info.plist */,
 				091FA2F52845D7D70035F3F4 /* Assets.xcassets */,
+				BAC1E769286244AC00B1DFFB /* GoogleService-Info.plist */,
 				091FA2F72845D7D70035F3F4 /* Preview Content */,
 			);
 			path = TakeTech;
@@ -175,7 +184,6 @@
 			children = (
 				01D7D966285B29AC00F262CA /* ScheduleModel.swift */,
 				092FCC3828585DFD002BE83D /* DataPerson.swift */,
-				09626BE62862214800140CA0 /* FireBaseManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -197,13 +205,38 @@
 				098E838C2859C3C70011AFC6 /* profileImageMod.swift */,
 				01D7D976285B2BE300F262CA /* pastExpertSession.swift */,
 				01D7D96E285B2AD400F262CA /* upExpertSession.swift */,
-				8828DE752857265000325CDF /* TabBar.swift */,
 				8828DE772857268600325CDF /* TabBarConsu.swift */,
 				8828DE792857269B00325CDF /* PastCard.swift */,
 				8828DE7B285726B200325CDF /* Upcoming.swift */,
 				098E83842859C3750011AFC6 /* Data */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BA43844B286728A7002BD8A5 /* Session arch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Session arch";
+			sourceTree = "<group>";
+		};
+		BA7F61B628645902001DBF66 /* UserHomeView arch */ = {
+			isa = PBXGroup;
+			children = (
+				092FCC3A285867A3002BE83D /* ListOfCards.swift */,
+				091FA3042845E3040035F3F4 /* consultantCard.swift */,
+				098E83F2285A46E40011AFC6 /* CardDetails.swift */,
+			);
+			path = "UserHomeView arch";
+			sourceTree = "<group>";
+		};
+		BA7F61B828645B49001DBF66 /* Auth arch */ = {
+			isa = PBXGroup;
+			children = (
+				106CE6CD2847EFBF00E394BB /* SignUp.swift */,
+				106CE6CB2847EF9900E394BB /* LogIn.swift */,
+			);
+			path = "Auth arch";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +260,8 @@
 				10C56F202855E66400A55DD8 /* FirebaseFirestore */,
 				10C56F222855E66400A55DD8 /* FirebaseStorage */,
 				09626BE9286223EB00140CA0 /* FirebaseFirestoreSwift */,
+				BAC1E7672862355600B1DFFB /* FirebaseMessaging */,
+				BA7F617D28630CA4001DBF66 /* SDWebImageSwiftUI */,
 			);
 			productName = TakeTech;
 			productReference = 091FA2EE2845D7D70035F3F4 /* TakeTech.app */;
@@ -259,6 +294,7 @@
 			mainGroup = 091FA2E52845D7D70035F3F4;
 			packageReferences = (
 				10C56F1D2855E66400A55DD8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				BA7F617C28630CA4001DBF66 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 091FA2EF2845D7D70035F3F4 /* Products */;
 			projectDirPath = "";
@@ -275,9 +311,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				091FA2F92845D7D70035F3F4 /* Preview Assets.xcassets in Resources */,
+				BAC1E76A286244AC00B1DFFB /* GoogleService-Info.plist in Resources */,
 				09931B95285F46EB0040A282 /* Localizable.strings in Resources */,
 				091FA2F62845D7D70035F3F4 /* Assets.xcassets in Resources */,
-				10C56F1C2855E58100A55DD8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,9 +324,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA43844D28672B47002BD8A5 /* sessionBookingView.swift in Sources */,
 				098E83932859C3C70011AFC6 /* profileImageMod.swift in Sources */,
 				092FCC3928585DFD002BE83D /* DataPerson.swift in Sources */,
-				106CE6D02847EFE200E394BB /* sheetView.swift in Sources */,
+				106CE6D02847EFE200E394BB /* ConsultantAgreementView.swift in Sources */,
 				098E838D2859C3C70011AFC6 /* FavoriteCard.swift in Sources */,
 				098E83F3285A46E40011AFC6 /* CardDetails.swift in Sources */,
 				01D7D973285B2B4500F262CA /* paymentView.swift in Sources */,
@@ -465,6 +502,7 @@
 				DEVELOPMENT_TEAM = H839WZD3DF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TakeTech/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -498,6 +536,7 @@
 				DEVELOPMENT_TEAM = H839WZD3DF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TakeTech/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -550,6 +589,14 @@
 				kind = branch;
 			};
 		};
+		BA7F617C28630CA4001DBF66 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -572,6 +619,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 10C56F1D2855E66400A55DD8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		BA7F617D28630CA4001DBF66 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA7F617C28630CA4001DBF66 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		BAC1E7672862355600B1DFFB /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10C56F1D2855E66400A55DD8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

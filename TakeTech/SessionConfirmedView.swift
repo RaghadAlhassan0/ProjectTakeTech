@@ -31,7 +31,8 @@ struct SessionConfirmedView: View {
                 
                 ZStack{
                     Text("Session Confirmed ")
-                        .font(.custom("text", size: 20))                        .fontWeight(.semibold)
+                        .font(.custom("text", size: 20))
+                        .fontWeight(.semibold)
                         .multilineTextAlignment(.center)
                         .padding(.leading, 120.0)
                         .padding(.bottom, 6.0)

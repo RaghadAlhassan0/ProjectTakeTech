@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>667223818755-khb70t392cbfjsgtqfvr8p3u0mm84dlu.apps.googleusercontent.com</string>
+	<string>90440305658-0d79jo0g2rikeqchs0e6a6f5j3t0isgo.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.667223818755-khb70t392cbfjsgtqfvr8p3u0mm84dlu</string>
+	<string>com.googleusercontent.apps.90440305658-0d79jo0g2rikeqchs0e6a6f5j3t0isgo</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDEqFZqrFPxPbtGWWxYacVx_nEADuAgWHk</string>
+	<string>AIzaSyApaRMaTGm7J5bQcZVuCOycj-uw6Mx1CJQ</string>
 	<key>GCM_SENDER_ID</key>
-	<string>667223818755</string>
+	<string>90440305658</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.ADA.TakeTech.sa</string>
 	<key>PROJECT_ID</key>
-	<string>taketech-6b512</string>
+	<string>expert-40753</string>
 	<key>STORAGE_BUCKET</key>
-	<string>taketech-6b512.appspot.com</string>
+	<string>expert-40753.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:667223818755:ios:1c62db82b2d4f751460436</string>
+	<string>1:90440305658:ios:76a96a9078cc67b82d3243</string>
 </dict>
 </plist>
